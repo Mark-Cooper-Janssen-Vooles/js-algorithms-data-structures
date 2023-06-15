@@ -5,6 +5,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
 Todo: 
 
 - [Section 2: Big O](#big-o-notation)
+  - timing our code
 - Section 3: Performance of Arrays and Objects
 - Section 4: Problem solving approach
 - Section 5: Problem solving patterns 
@@ -41,4 +42,26 @@ Todo:
 s2-bigO.js 
 
 - Whats the need for big O notation?
-  - if we have two valid solutions to a problem, 
+  - if we have two valid solutions to a problem, some are "better" and run faster, and this can matter at scale
+  - leetcode for example compares them for speed 
+
+#### Timing our code 
+- We want code that is faster, less memory-intensive whilst still being readable. 
+- How fast does code run? we can use built-in js timing functions, i.e. `performance.now();`
+````js
+function addUpTo(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += 1;
+  }
+  return total;
+}
+
+const t1 = performance.now();
+addUpTo(1000000);
+const t2 = performance.now();
+
+console.log(`Time elapsed: ${(t2 - t1) / 1000} seconds.`)
+````
+- for fast algorithms, speed measurements may not be precise enough - it may vary computer to computer etc. Thats where big O notation comes in. 
+
