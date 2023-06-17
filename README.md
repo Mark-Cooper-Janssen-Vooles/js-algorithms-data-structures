@@ -135,3 +135,20 @@ function printAllPairs(n) {
 - the above is O(n squared), the runtime grows exponentially with n
 
 
+### Simplifying Big O Expressions 
+
+- Smaller terms / constants don't matter, we just want the general trend
+  - O(2n) is simplified to O(n) => increase with n
+  - O(500) is simplified to O(1) => doesn't increase with scale
+  - O(13n squared) is simplified to O(n squared) => increases at n squared
+  - O(n squared + 5n + 8) => is simplified to O(n squared)
+    - the 5n + 8 is insignificant if we zoom out to a large scale 
+
+- Big O shorthands / rules of thumb:
+  - arithmetic operations are constant. adding, dividing, subtracting are constant, i.e. O(1)
+  - variable assignment is constant 
+  - accessing elements in an array (by index) or object (by key) is constant 
+  - in a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
+    - i.e. if only constants happen in the loop, its O(n). but if another loop happens, its O(n squared)
+
+### Space complexity 
