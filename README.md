@@ -6,7 +6,13 @@ Todo:
 
 - [Section 2: Big O](#big-o-notation)
   - timing our code
-- Section 3: Performance of Arrays and Objects
+  - official intro to big O
+  - space complexity
+  - logarithms
+- [Section 3: Performance of Arrays and Objects](#analyzing-performance-of-arrays-and-objects)
+  - the big O of objects 
+  - when are arrays slow?
+  - the big O of array methods
 - Section 4: Problem solving approach
 - Section 5: Problem solving patterns 
 - Section 6: Optional challenges
@@ -122,7 +128,7 @@ function addUpTo(n) {
   - we don't care, when we zoom out in a massive chart and we care in a "fuzzy" way - it looks the same 
   - so we just call it O(n) even if its 10n
 
-- f(n) = n squared
+- f(n) = n²
 ````js
 function printAllPairs(n) {
   for (var i = 0; i < n; i++) {
@@ -132,7 +138,7 @@ function printAllPairs(n) {
   }
 }
 ````
-- the above is O(n squared), the runtime grows exponentially with n
+- the above is O(n²), the runtime grows exponentially with n
 
 
 ### Simplifying Big O Expressions 
@@ -140,8 +146,8 @@ function printAllPairs(n) {
 - Smaller terms / constants don't matter, we just want the general trend
   - O(2n) is simplified to O(n) => increase with n
   - O(500) is simplified to O(1) => doesn't increase with scale
-  - O(13n squared) is simplified to O(n squared) => increases at n squared
-  - O(n squared + 5n + 8) => is simplified to O(n squared)
+  - O(13n ²) is simplified to O(n²) => increases at n ²
+  - O(n ² + 5n + 8) => is simplified to O(n ²)
     - the 5n + 8 is insignificant if we zoom out to a large scale 
 
 - Big O shorthands / rules of thumb:
@@ -149,7 +155,7 @@ function printAllPairs(n) {
   - variable assignment is constant 
   - accessing elements in an array (by index) or object (by key) is constant 
   - in a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
-    - i.e. if only constants happen in the loop, its O(n). but if another loop happens, its O(n squared)
+    - i.e. if only constants happen in the loop, its O(n). but if another loop happens, its O(n ²)
 
 ### Space complexity 
 
@@ -181,4 +187,51 @@ function double(arr) {
 - the above has an assignment of an array that grows depending on the variable, thus this reference type is O(n) - so O(n) space complexity 
 
 
+### Logarithms 
 
+- O(1), O(n), O(n²) are simple / common expressions
+- sometimes we have more complex, i.e. O(log n). 
+- A log is an inverse of exponentiation 
+  - log2(8) = 3  ... says: log to the power of base 2 times 8 equals 3 
+    - essentially asking: 2 to what power will give us 8? 2 x 2 x 2 = 8 (therefore the answer is 3)
+      - 2 to the power of 3 = 8
+    - log2 (value) = exponent ---> 2 to the power of exponent = value 
+- because we care about the big picture, we'll just ignore the two and just write "log"
+  - log === log base 2
+
+- the logarithm of a number roughly measures the number of times you cna divide that number by 2 before you get a value thats less than or equal to one 
+  - i.e. if our number is 8. we divide by 2, 4. divide by 2, 2. divide by 2, 1. so log(8) = 3
+
+- logarithm complexity:
+  - logarithm time complexity os great. O(log n) is only slightly more than O(1). better than O(n), O(nlog n) and O(n²).
+
+
+- certain searching algorithms have log time complexity
+- efficient sorting algorithms involve logs 
+- recursion sometimes involves logarithmic space complexity
+
+=== 
+
+## Analyzing Performance of Arrays and Objects 
+
+### The big O of objects 
+
+- objects are unordered, key value pairs
+- work well when you don't need order
+- when you need fast access / insection / removal: 
+  - insertion - O(1)
+  - removal - O(1)
+  - searching - O(n)
+  - access - O(1)
+- when you don't need ordering, objects are ideal! 
+
+- big O of object methods:
+  - Object.keys - O(n)
+  - Object.values - O(n)
+  - Object.entries - O(n)
+  - hasOwnProperty - O(1)
+
+### Arrays 
+
+- arrays are an ordered list
+- 
