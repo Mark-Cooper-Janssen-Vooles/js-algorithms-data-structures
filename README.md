@@ -234,4 +234,33 @@ function double(arr) {
 ### Arrays 
 
 - arrays are an ordered list
-- 
+- When to use:
+  - when you need order 
+  - when you need fast access / insertion and removal (sort of...)
+- big O of arrays:
+  - insertion - it depends...
+  - removal - it depends...
+  - searching - O(n)
+  - access - O(1)
+- insertion: 
+  - if you add on to the end, its O(1) (i.e. `arr.push('test')`)
+  - if you try to add it do the beginning of the array, everything needs to be re-indexed. therefore its O(n), i.e. `arr.shift()`
+- removal:
+  - same here - if we remove the first item in the array, everything needs to be re-indexed. thats O(n), i.e. `arr.unshift()`
+  - removing from the end would be O(1) - i.e. `arr.pop('test')`
+
+
+### Big O of Array methods 
+
+- push - O(1)
+- pop - O(1)
+- shift - O(n)
+- unshift - O(n)
+- concat - O(n)
+- slice - O(n)
+- splice - O(n)
+- sort - O(n log n) ...
+  - => we talk about sorting algorithms later
+  - the time it takes to sort an array is larger. we have to make comparisons and move things around
+- forEach/map/filter/reduce/etc - O(n)
+
