@@ -65,3 +65,19 @@ console.log(`Time elapsed: ${(t2 - t1) / 1000} seconds.`)
 ````
 - for fast algorithms, speed measurements may not be precise enough - it may vary computer to computer etc. Thats where big O notation comes in. 
 
+### Counting Operations 
+
+- if not time, then we could count the number of simple operations the computer needs to perform 
+- i.e. multiplication, addition, division are all 'operations' that need to be performed. 
+  - `return n * (n + 1) / 2` has 3 operations 
+  ````js
+  function addUpTo(n) {
+    let total = 0;
+    for (let i = 1; i <= n; i++) {
+      total += 1;
+    }
+      return total;
+  }
+  ```` 
+  - the above code has `n` operations by comparison
+
