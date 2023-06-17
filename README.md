@@ -152,3 +152,33 @@ function printAllPairs(n) {
     - i.e. if only constants happen in the loop, its O(n). but if another loop happens, its O(n squared)
 
 ### Space complexity 
+
+- "auxilary space complexity" refers to space required by the algorithm, not including the space taken up by the inputs
+- Space complexity in JS rules of thumb:
+  - most primitives (Bool, numbers, undefined, null) are constant space 
+  - Strings require O(n) space (where n is the length of the string)
+    - i.e. a 50 length string takes up 50x the length of a 1 length string 
+  - Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+````js
+function sum(arr) {
+  let total = 0; 
+  for (let = 0; i <arr.length ; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+````
+- we've got total = 0 and i = 0, so we've just got two items. the space complexity is just 2, simplified to O(1) space. 
+````js
+function double(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i])
+  }
+  return newArr
+}
+````
+- the above has an assignment of an array that grows depending on the variable, thus this reference type is O(n) - so O(n) space complexity 
+
+
+
