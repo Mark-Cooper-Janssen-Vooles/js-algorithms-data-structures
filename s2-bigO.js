@@ -1,11 +1,15 @@
 console.log('hi')
 
-function addUpTo(n) {
+function addUpTo(n) { // O(n)
   let total = 0;
   for (let i = 1; i <= n; i++) {
     total += 1;
   }
   return total;
+}
+
+function addUpTo(n) { // O(1)
+  return n * (n + 1) / 2
 }
 
 
