@@ -354,3 +354,15 @@ function charCount(str) {
   2. temporarily ignore that difficulty
   3. write a simplified solution
   4. incorporate that difficulty back in
+
+
+### Step 5: Look back and refactor
+
+Ask yourself these questions:
+- can you check the result?
+- can you derive the result differently?
+- can you understand it at a glance?
+- can you use the result or method for some other problem?
+- can you improve the performance of your solution?
+- can you think of other ways to refactor?
+- how have other people solved this problem? 
