@@ -326,4 +326,22 @@ charCount(null)
 
 ### Step 3: Break it down 
 
-communicate what you're doing, talk out the steps 
+- communicate what you're doing, talk out the steps 
+- explicitly write out the steps you need to take
+  - helps highlight problems
+  - keeps you focused
+- e.g.:
+````js
+function charCount(str) {
+  // make object to return at end 
+  // lowercase all string
+  // strip spaces and non numbers / letters
+
+  // loop over string
+    // check if character exists in object
+    // if it is - add one to count
+    // if not in object - add it and set value to one
+
+  // return object at end 
+}
+````
