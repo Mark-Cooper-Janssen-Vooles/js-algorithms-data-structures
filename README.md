@@ -345,3 +345,12 @@ function charCount(str) {
   // return object at end 
 }
 ````
+
+### Step 4: Solve or Simplify
+
+- solve the problem if you can, or solve a simpler problem!
+- Simplify!:
+  1. find the core difficulty in what you're trying to do 
+  2. temporarily ignore that difficulty
+  3. write a simplified solution
+  4. incorporate that difficulty back in
