@@ -14,7 +14,12 @@ Todo:
   - when are arrays slow?
   - the big O of array methods
 - [Section 4: Problem solving approach](#problem-solving-approach)
-- Section 5: Problem solving patterns 
+  - understand the problem 
+  - use conctre examples
+  - break it down
+  - solve or simplify
+  - look back and refactor
+- [Section 5: Problem solving patterns](#problem-solving-patterns)
 - Section 6: Optional challenges
 - Section 7: Recursion
   - Section 8: Recursion problems 
@@ -210,7 +215,7 @@ function double(arr) {
 - efficient sorting algorithms involve logs 
 - recursion sometimes involves logarithmic space complexity
 
-=== 
+---
 
 ## Analyzing Performance of Arrays and Objects 
 
@@ -366,3 +371,7 @@ Ask yourself these questions:
 - can you improve the performance of your solution?
 - can you think of other ways to refactor?
 - how have other people solved this problem? 
+
+---
+
+## Problem Solving Patterns
