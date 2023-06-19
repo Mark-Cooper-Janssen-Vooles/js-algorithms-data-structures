@@ -13,7 +13,7 @@ Todo:
   - the big O of objects 
   - when are arrays slow?
   - the big O of array methods
-- Section 4: Problem solving approach
+- [Section 4: Problem solving approach](#problem-solving-approach)
 - Section 5: Problem solving patterns 
 - Section 6: Optional challenges
 - Section 7: Recursion
@@ -41,7 +41,7 @@ Todo:
   - Section 29: Dynamic programming 
   - Section 30: The wild west 
 
-===
+---
 
 ## Big O Notation
 
@@ -263,4 +263,27 @@ function double(arr) {
   - => we talk about sorting algorithms later
   - the time it takes to sort an array is larger. we have to make comparisons and move things around
 - forEach/map/filter/reduce/etc - O(n)
+
+
+---
+
+## Problem Solving Approach 
+
+Algorithms and problem solving patterns 
+
+
+- An algorithm is "a process or set of steps to accomplish a certain task"
+- devise a plan for solving problems 
+- master common problem solving patterns 
+  - a lot of problems can be broken into categories 
+
+
+Basic steps:
+- understand the problem
+- explore concrete examples
+- break it down
+- solve / simplify
+- look back and refactor 
+
+### Step 1: Understand the problem
 
