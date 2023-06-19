@@ -287,3 +287,43 @@ Basic steps:
 
 ### Step 1: Understand the problem
 
+- slow down and ask questions to fully understand it before you start typing code
+1. can i restate the problem in my own words?
+2. what are the inputs that go into the problem?
+3. what are the outputs that should come from the solution to the problem?
+4. can the outputs be determined from the inputs? in other words, do i have enough information to solve the problem? (you may not be able to answer until you set about solving the problem)
+5. how should i label the important pieces of data that are a part of the problem?
+
+### Step 2: Concrete Examples
+
+- Coming up with examples can help you understand the problem better
+  - examples also provide sanity checks that your eventual solution works how it should 
+
+Steps:
+1. write down 2 or so examples with very simple input and output 
+2. progress to more complex examples
+3. explore empty inputs
+4. explore invalid inputs 
+
+"Write a function which takes in a string and returns a count of each character in the string"
+````js
+// for 1: 
+charCount("aaaa") // {a:4}
+charCoubt("hello") // {h:1, e: 1, l:2, o:1}
+
+// for 2: 
+charCount("my phone number is 129819208") // are we going to allow numbers? what about @$#%#%^&@# characters?
+charCount("hello HI") // dealing with uppercase
+
+// for 3:
+charCount(" ")
+charCount("")
+
+// for 4:
+charCount() // do we return null, false, undefined, error? 
+charCount(null) 
+````
+
+### Step 3: Break it down 
+
+communicate what you're doing, talk out the steps 
