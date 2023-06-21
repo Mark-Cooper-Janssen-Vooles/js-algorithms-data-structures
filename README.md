@@ -20,6 +20,8 @@ Todo:
   - solve or simplify
   - look back and refactor
 - [Section 5: Problem solving patterns](#problem-solving-patterns)
+  - [Frequency Counters](#frequency-counters)
+  - [Multiple Pointers](#multiple-pointers)
 - Section 6: Optional challenges
 - Section 7: Recursion
   - Section 8: Recursion problems 
@@ -375,3 +377,85 @@ Ask yourself these questions:
 ---
 
 ## Problem Solving Patterns
+
+1. devise a plan for solving problems 
+2. master common problem solving patterns
+
+
+some patterns:
+- frequency counter
+- multiple pointers
+- sliding window
+- divide and conquer 
+- dynamic programming
+- greedy algorithms
+- backtracking
+- more! 
+
+### Frequency Counters
+
+- use objects or sets to collect values / frequencies of values 
+- this can often avoid the need for nested loops or O(n^2) operations with arrays / strings 
+- usually O(n) time 
+
+An example:
+- write a function called `same` which accepts two arrays. the function should return true if every value in the array has its corresponding value squared in the second array. the frequency of values must be the same. order doesn't matter.
+````js
+// examples:
+same([1, 2, 3], [4, 1, 9]) // true (order isnt there but frequency is the same)
+same([1, 2, 1], [4, 4, 1]) // false (frequency isn't the same, we need 1, 1, 4)
+````
+
+a naive solution:
+````js
+function same(arr1, arr2) {
+  if(arr1.length !== arr2.length) {
+    return false
+  }
+  for (let i = 0; i < arr1.length; i++) {
+    let correctIndex = arr2.indexOf(arr1[i] ** 2) // this is another loop. so O(n^2)
+    if (correctIndex === -1) {
+      return false
+    }
+    arr2.splice(correctIndex, 1)
+  }
+  return true
+}
+````
+
+refactored using frequency counter pattern:
+````js
+function same2(arr1, arr2){
+  if(arr1.length !== arr2.length){
+      return false;
+  }
+  let frequencyCounter1 = {}
+  let frequencyCounter2 = {}
+  for(let val of arr1){
+      frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
+  }
+  for(let val of arr2){
+      frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1        
+  }
+  for(let key in frequencyCounter1){
+      if(!(key ** 2 in frequencyCounter2)){
+          return false
+      }
+      if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]){
+          return false
+      }
+  }
+  return true
+}
+````
+- instead of looping over the array and then using a nested loop to compare, we loop over each array individually. 
+- two seperate loops is vastly better than nested loops 
+- essentially we're using objects, if we remember above the big O of objects for access is O(1), where for arrays, which are indexed, is O(n)
+
+1. first we check if the lengths are the same, if not exit with false
+2. then we create objects out of our arrays O(n)
+3. then we check inside those objects using O(1)
+  - first we need the key squared to exist in frequencyCounter2 (i.e. if we have a 2 in the first array, we need a 4 in the second array) as per the algorithm rule
+  - then we need to check that the values of the keys are correct (i.e. that they occur the same amount of times each)
+
+### Multiple Pointers
