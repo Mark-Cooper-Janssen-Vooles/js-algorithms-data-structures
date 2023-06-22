@@ -48,7 +48,9 @@ function same2(arr1, arr2){
 // console.log(result2)
 
 
-// Anagrams
+// ======================
+
+// CHALLENGE: Anagrams
 // given two strings, write a function to determine if the second string is an anagram of the first.
 // an anagram is a word or phrase formed by rearranging the letters of another 
 // e.g. cinema can be formed from iceman
