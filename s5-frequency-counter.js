@@ -137,4 +137,28 @@ const sameFrequency = (num1, num2) => {
 
 
 // challenge: areThereDuplicates
-// implement a function areThereDuplicates which accepts a variable number of arguments
+// implement a function areThereDuplicates which accepts a variable number of arguments, and checks whether there are duplicates among the arguments passed in. you can solve this using frequency counter OR multiple pointer 
+
+const areThereDuplicates = (...args) => {
+  // create an object 
+  const obj = {}
+
+  // loop through arguments
+  for (let arg of args) {
+    // if argument doesn't exist in object, store it
+    // if it does, increment by one 
+    obj[arg] ? obj[arg] = obj[arg] + 1 : obj[arg] = 1
+  }
+
+  for (let key in obj) {
+   if (obj[key] > 1) {
+    return true
+   }
+  }
+
+  return false
+}
+
+console.log(areThereDuplicates(1, 2, 3)) // false
+console.log(areThereDuplicates(1, 2, 2)) // true 
+console.log(areThereDuplicates('a', 'b', 'c', 'a')) // true 
