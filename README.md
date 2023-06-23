@@ -23,6 +23,7 @@ Todo:
   - [Frequency Counters](#frequency-counters)
   - [Multiple Pointers](#multiple-pointers)
   - [Sliding window](#sliding-window-pattern)
+  - [Divide and Conquer](#divide-and-conquer-pattern)
 - Section 6: Optional challenges
 - Section 7: Recursion
   - Section 8: Recursion problems 
@@ -571,5 +572,59 @@ function maxSubarraySum2(arr, num) {
   }
 
   return maxSum
+}
+````
+
+
+## Divide and Conquer Pattern
+
+- This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data 
+- this pattern can tremendously decrease time complexity
+  - sorthing algorithms cover this in-depth, i.e. quick sort of merge sort are examples 
+  - depending on the problem, can be a significant helper
+
+- example:
+  - given a sorted array of integers, write a function called search, that accepts a value and returns the index where the value passed to the function is located. if the value is not found, return -1
+````js
+search([1, 2, 3, 4, 5], 4) // 3 (index of 3)
+search([1, 2, 3], 11) // -1 (value not found)
+````
+
+- naive solution
+  - linear search, O(n)
+````js
+function search(arr, val) {
+  for ( let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) {
+      return i
+    }
+  }
+  return -1
+}
+````
+
+- refactored solution
+  - binary search, O(log n)
+````js
+function search(array, val) {
+  let min = 0;
+  let max = array.length - 1;
+
+  while (min <= max) {
+    let middle = Math.floor((min + max) / 2)
+    let currentElement = array[middle]
+
+    if (currentElement < val) {
+      min = middle + 1
+    }
+    else if (currentElement > val) {
+      max = middle - 1
+    }
+    else {
+      return middle
+    }
+  }
+
+  return -1
 }
 ````

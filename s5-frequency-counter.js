@@ -85,5 +85,56 @@ const validAnaragram = (str1, str2) => {
   return true;
 }
 
-const result3 = validAnaragram('aaz', 'aza');
-console.log(result3)
+// const result3 = validAnaragram('aaz', 'aza');
+// console.log(result3)
+
+
+// ====
+
+// challenge: sameFrequency
+// given two positive integers, find out if the two numbers have the same frequency of digits 
+
+// sameFrequency(182, 281) // true 
+// sameFrequency(31, 14) //false
+
+const sameFrequency = (num1, num2) => {
+  // create obj1 and obj2
+  const obj1 = {}
+  const obj2 = {}
+  
+  //loop through both nums seperately
+  const num1s = num1.toString()
+  for (let i = 0; i < num1s.length ; i++ ) {
+    // add to obj if key doesn't exist as value 1 
+    // increment value if it does exist
+    obj1[num1s[i]] ? obj1[num1s[i]]++ : obj1[num1s[i]] = 1
+  }
+
+  const num2s = num2.toString()
+  for (let i = 0; i < num2s.length ; i++ ) {
+    obj2[num2s[i]] ? obj2[num2s[i]]++ : obj2[num2s[i]] = 1
+  }
+
+  console.log(obj1)
+  console.log(obj2)
+  
+  // look through keys and compare them 
+  for (let key in obj1) {
+    if (obj1[key] !== obj2[key]) {
+      return false 
+    }
+  }
+
+  return true
+}
+
+//console.log(sameFrequency(182, 281)) // true 
+// sameFrequency(31, 14) //false
+// sameFrequency(3589578, 5879385) // true
+// sameFrequency(22,222) // false
+
+// =====
+
+
+// challenge: areThereDuplicates
+// implement a function areThereDuplicates which accepts a variable number of arguments
