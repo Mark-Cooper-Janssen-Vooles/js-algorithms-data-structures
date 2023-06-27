@@ -128,3 +128,35 @@ const averagePair = (arr, avg) => {
 // console.log(averagePair([],4)) // false
 
 // ==========
+
+
+// challenge: isSubsequence 
+// write a function called isSubsequence which takes in two strings and checks whether the characters in the first string form a subsequence of the characters in the second string. in other words, the function should check whether the characters in the first string appear somewhere in the second string, without their order changing 
+
+const isSubsequence = (s1, s2) => {
+  let p1 = 0
+  let p2 = 0
+  let charMatching = 0;
+
+  while (p2 < s2.length + 1) {
+    if (s1[p1] === s2[p2]) {
+      charMatching++
+      if (charMatching === s1.length) {
+        return true
+      }
+      // increment them both if theres a match
+      p1++
+      p2++
+    } else {
+      // increment only p2 if no match
+      p2++
+    }
+  }
+
+  return false
+}
+
+console.log(isSubsequence('hello', 'hello world')); // true
+console.log(isSubsequence('sing', 'sting')); // true
+console.log(isSubsequence('abc', 'abracadabra')); // true
+console.log(isSubsequence('abc', 'acb')); // false (order matters)
