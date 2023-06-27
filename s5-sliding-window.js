@@ -111,8 +111,11 @@ const maxSubarraySum4 = (arr, end) => {
   return maxSum
 }
 
-console.log(maxSubarraySum4([100,200,300,400], 2)) // 700
-console.log(maxSubarraySum4([1,4,2,10,23,3,1,0,20], 4))  // 39 
-console.log(maxSubarraySum4([-3,4,0,-2,6,-1], 2)) // 5
-console.log(maxSubarraySum4([3,-2,7,-4,1,-1,4,-2,1],2)) // 5
-console.log(maxSubarraySum4([2,3], 3)) // null
+// console.log(maxSubarraySum4([100,200,300,400], 2)) // 700
+// console.log(maxSubarraySum4([1,4,2,10,23,3,1,0,20], 4))  // 39 
+// console.log(maxSubarraySum4([-3,4,0,-2,6,-1], 2)) // 5
+// console.log(maxSubarraySum4([3,-2,7,-4,1,-1,4,-2,1],2)) // 5
+// console.log(maxSubarraySum4([2,3], 3)) // null
+
+
+// ======
