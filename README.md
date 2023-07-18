@@ -633,3 +633,16 @@ function search(array, val) {
 
 ## Recursion 
 
+Recursion is a different way to think about solving problems, we can do it iteratively or recursively. 
+
+- what recursion is and how it can be useful:
+  - recursion is a process (a function) that calls itself 
+  - recursion is used a lot - JSON.parse / JSON.stringify is recursive under the hood, same with DOM traversal, `document.getElementById` etc
+  - sometimes recursion is cleaner to iteration
+- two essential components of a recursive function: 
+  - a recursive function calls itself over and over until some condition changes 
+- visualise the call stack to better debug and understand recursive functions
+  - when a function is invoked, its pushed on the top of the call stack
+  - when we write recursive functions, we keep pushing new functions onto the call stack
+- use helper method recursion and pure recursion to solve more difficult problems 
+
