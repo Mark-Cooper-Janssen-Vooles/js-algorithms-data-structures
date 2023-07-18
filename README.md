@@ -25,7 +25,7 @@ Todo:
   - [Sliding window](#sliding-window-pattern)
   - [Divide and Conquer](#divide-and-conquer-pattern)
 - Section 6: Optional challenges
-- Section 7: Recursion
+- [Section 7: Recursion](#recursion)
   - Section 8: Recursion problems 
   - Section 9: Bonus challenging recursion problems (probs don't do)
 - Section 10: Searching algorithms 
@@ -628,3 +628,8 @@ function search(array, val) {
   return -1
 }
 ````
+
+---
+
+## Recursion 
+
