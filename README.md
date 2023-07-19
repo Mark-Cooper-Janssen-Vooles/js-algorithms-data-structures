@@ -639,10 +639,56 @@ Recursion is a different way to think about solving problems, we can do it itera
   - recursion is a process (a function) that calls itself 
   - recursion is used a lot - JSON.parse / JSON.stringify is recursive under the hood, same with DOM traversal, `document.getElementById` etc
   - sometimes recursion is cleaner to iteration
+
 - two essential components of a recursive function: 
-  - a recursive function calls itself over and over until some condition changes 
+  - invoke the same function with a different input until you reach your base case
+  - base case: the condition when the recursion ends
+  - the two essential parts:
+    - Base Case (end condition)
+    - Different input (you call it with different arguments each time)
+
+basic example using recursion:
+````js
+function countDown(num) {
+  if (num <= 0) {
+    console.log('all done')
+    return // we have to return to stop it
+  }
+  console.log(num)
+  num--
+  countDown(num)
+}
+
+countDown(5)
+````
+
+same thing using iteration:
+````js
+function countDownIteration(num) {
+  for (var i = num; i>0; i--) {
+    console.log(i)
+  }
+  console.log('all done')
+}
+````
+
 - visualise the call stack to better debug and understand recursive functions
   - when a function is invoked, its pushed on the top of the call stack
   - when we write recursive functions, we keep pushing new functions onto the call stack
+````js
+function sumRange(num) {
+console.log(num)
+if (num === 1) return 1
+return num + sumRange(num-1)
+}
+sumRange(3)
+````
+  - in the above recursion example, the first time sumRange is called, it returns `3 + sumRange(2)`. the second sumRange, sumRange(2) then goes to the top of the callstack, which returns `2 + sumRange(1)`. sumRange(1) then returns 1 using the if case. None of them actually return until sumRange(1), which is top of the call stack, resolves. It resolves to 1, so then sumRange(2) can finish - it resolves to 3 (2+1), then sumRange(3) can finish which resolves to 6 (3+3) and we have our final answer.
+
 - use helper method recursion and pure recursion to solve more difficult problems 
+
+
+- without the 'base case' which is when the recursion stops, we get 'maximum callstack size exceeded' error. the maximum call stack is somewhere around 10,000 but it differs depending whats running the js. 
+- you need a base case which returns something without calling itself again, this is what recursion is based on. 
+
 
