@@ -57,7 +57,7 @@ function factorialRecursive(num) {
 // helper method recursion 
 
 
-function collectOddValues(arr) {
+function collectOddValuesHelper(arr) {
   let result = []
 
   function helper(helperInput) {
@@ -77,4 +77,24 @@ function collectOddValues(arr) {
   return result;
 }
 
-//console.log(collectOddValues([1, 2, 3, 4]))
+//console.log(collectOddValuesHelper([1, 2, 3, 4]))
+
+// ===================
+
+// pure recursion 
+
+function collectOddValuesPure(arr) {
+  let newArr = []
+
+  if (arr.length === 0) return newArr
+
+  if (arr[0] % 2 !== 0){ // if num is odd, add to newArr
+    newArr.push(arr[0])
+  }
+
+  // this goes through and returns the array 
+  newArr = newArr.concat(collectOddValuesPure(arr.slice(1)))
+  return newArr
+}
+
+console.log(collectOddValuesPure([1, 2, 3, 4]))

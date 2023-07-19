@@ -713,3 +713,26 @@ function outer(input) {
 
 
 ### Pure Recursion
+
+- similar to helper, but it doesn't use an outer variable
+- probably more difficult to wrap your head around for more complex problems 
+````js
+function collectOddValuesPure(arr) {
+  let newArr = []
+
+  if (arr.length === 0) return newArr
+
+  if (arr[0] % 2 !== 0){ // if num is odd, add to newArr
+    newArr.push(arr[0])
+  }
+
+  // this goes through and returns the array 
+  newArr = newArr.concat(collectOddValuesPure(arr.slice(1)))
+  return newArr
+}
+````
+- pure recursion tips:
+  - for arrays use slice, spread operator, concat. makes copies so you dont mutate 
+  - for strings, use slice / substr / substring to make copies because they are immutable 
+  - to make copies of objects, use Object.assign or the spread operator
+
