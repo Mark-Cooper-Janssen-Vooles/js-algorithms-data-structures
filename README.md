@@ -695,5 +695,21 @@ sumRange(3)
 
 ### Helper Method Recursion
 
+````js
+function outer(input) {
+  let outerScopedVariable = []
+
+  function helper(helperInput) {
+    // modify the outerScopedVariable
+    helper(helperInput--)
+  }
+  helper(input)
+
+  return outerScopedVariable
+}
+````
+- we have two functions, the `outer` function and the recursive function inside, `helper`.
+- this enables us to have a piece of data that persists throughout, the outerScopedVariable. since we don't have persistence in a recursive function
+
 
 ### Pure Recursion

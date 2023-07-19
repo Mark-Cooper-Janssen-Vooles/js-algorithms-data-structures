@@ -50,4 +50,31 @@ function factorialRecursive(num) {
   return num * factorialRecursive(num - 1)
 }
 
-console.log(factorialRecursive(3))
+//console.log(factorialRecursive(3))
+
+//===========
+
+// helper method recursion 
+
+
+function collectOddValues(arr) {
+  let result = []
+
+  function helper(helperInput) {
+    if (helperInput.length === 0) {
+      return;
+    }
+
+    // if num is odd, add to result
+    if (helperInput[0] % 2 !== 0) {
+      result.push(helperInput[0])
+    }
+
+    helper(helperInput.slice(1))
+  }
+  helper(arr)
+
+  return result;
+}
+
+//console.log(collectOddValues([1, 2, 3, 4]))
