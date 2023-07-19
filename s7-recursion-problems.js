@@ -79,3 +79,29 @@ const productOfArray = (arr) => {
 // console.log(productOfArray([1,2,3,10])) // 60
 
 //========================
+
+// recursiveRange
+// Write a function called recursiveRange which accepts a number and adds up all the numbers from 0 to the number passed to the function 
+
+const recursiveRange = (num) => {
+  if (num <= 0) {
+    return 0
+  }
+
+  let sum = 0
+  const helper = (value) => {
+    if (value === 0) {
+      return
+    }
+    sum = sum + value
+    helper(value - 1)
+  }
+  helper(num)
+
+  return sum
+}
+
+// console.log(recursiveRange(6)) // 21
+// console.log(recursiveRange(10)) // 55 
+
+//======================
