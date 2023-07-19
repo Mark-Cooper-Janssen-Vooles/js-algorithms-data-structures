@@ -26,6 +26,8 @@ Todo:
   - [Divide and Conquer](#divide-and-conquer-pattern)
 - Section 6: Optional challenges
 - [Section 7: Recursion](#recursion)
+  - [Helper Method Recursion](#helper-method-recursion)
+  - [Pure Recursion](#pure-recursion)
   - Section 8: Recursion problems 
   - Section 9: Bonus challenging recursion problems (probs don't do)
 - Section 10: Searching algorithms 
@@ -691,4 +693,7 @@ sumRange(3)
 - without the 'base case' which is when the recursion stops, we get 'maximum callstack size exceeded' error. the maximum call stack is somewhere around 10,000 but it differs depending whats running the js. 
 - you need a base case which returns something without calling itself again, this is what recursion is based on. 
 
+### Helper Method Recursion
 
+
+### Pure Recursion
