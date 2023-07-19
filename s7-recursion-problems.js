@@ -54,3 +54,28 @@ const factorial = (num) => {
 // console.log(factorial(7)) // 5040
 
 // ==================
+
+
+//productOfArray
+//Write a function called productOfArray which takes in an array of numbers and returns the product of them all.
+
+const productOfArray = (arr) => {
+  let sum = 1
+
+  const helper = (value) => {
+    if (value.length === 0) {
+      return
+    }
+
+    sum = sum * value[0]
+    helper(value.slice(1))
+  }
+  helper(arr)
+
+  return sum
+}
+
+// console.log(productOfArray([1,2,3])) // 6
+// console.log(productOfArray([1,2,3,10])) // 60
+
+//========================
