@@ -29,8 +29,8 @@ Todo:
   - [Helper Method Recursion](#helper-method-recursion)
   - [Pure Recursion](#pure-recursion)
   - Section 8: Recursion problems 
-  - Section 9: Bonus challenging recursion problems (probs don't do)
-- Section 10: Searching algorithms 
+  - Section 9: Bonus challenging recursion problems
+- [Section 10: Searching algorithms](#searching-algorithms) 
   - Section 11: Bubble Sort => do this 
   - Section 12: Section sort => do this 
   - Section 13: Insertion sort => do this 
@@ -735,3 +735,41 @@ function collectOddValuesPure(arr) {
   - for strings, use slice / substr / substring to make copies because they are immutable 
   - to make copies of objects, use Object.assign or the spread operator
 
+
+## Searching Algorithms
+
+- describe what a searching algorithm is 
+- implement linear search on arrays
+- implement binary search on sorted arrays
+- implement a naive string searching algorithm
+- implement the KMP string searching algorithm
+
+### Linear Search
+
+- linear search is the simplest way to search: look at every element, in order, in the array and check if its the value we want
+  - good approach for unsorted data
+    - `indexOf`, `includes`, `find`, `findIndex` built-in js array methods do this
+- for sorted data there are better ways to search
+````js
+// example linear search: function accepts array and value
+// loop through array and check if current element is equal to the value
+// if it is, return index that its found. if never found, return -1 
+
+const linearSearch = (arr, val) => {
+  let result = -1
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) {
+      result = i
+    }
+  }
+
+  return result
+}
+
+console.log(linearSearch([1, 2, 3], 3)) // 2
+console.log(linearSearch([1, 2, 3], 4)) // -1 
+````
+
+- Big O of linear search:
+  - best case is O(1) , i.e. we find it straight away
+  - worst case is O(n), i.e. its the last element. average is O(n) too, general trend.
