@@ -31,6 +31,8 @@ Todo:
   - Section 8: Recursion problems 
   - Section 9: Bonus challenging recursion problems
 - [Section 10: Searching algorithms](#searching-algorithms) 
+  - [Linear search](#linear-search)
+  - [Binary search](#binary-search)
   - Section 11: Bubble Sort => do this 
   - Section 12: Section sort => do this 
   - Section 13: Insertion sort => do this 
@@ -736,6 +738,9 @@ function collectOddValuesPure(arr) {
   - to make copies of objects, use Object.assign or the spread operator
 
 
+---
+
+
 ## Searching Algorithms
 
 - describe what a searching algorithm is 
@@ -773,3 +778,15 @@ console.log(linearSearch([1, 2, 3], 4)) // -1
 - Big O of linear search:
   - best case is O(1) , i.e. we find it straight away
   - worst case is O(n), i.e. its the last element. average is O(n) too, general trend.
+
+### Binary Search 
+
+- binary search is a much faster form of search
+- rather than eliminating one element at a time, you can eliminate half of the remaining elements at a time 
+- binary search only works on sorted arrays 
+  - the idea is divide and conquer 
+  - since theyre sorted, binary search picks a halfway point in the array. 
+  - i.e. is it before or after the middle 
+  - if its after, we then make all thats after the new array. and again check the mid point of the new set. is it before or after?
+  - the process repeats itself until it finds the answer 
+
