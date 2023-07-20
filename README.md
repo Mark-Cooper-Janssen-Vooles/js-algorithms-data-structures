@@ -467,7 +467,6 @@ function same2(arr1, arr2){
 - Creating pointers or values that correspond to an index or position and move towards the beginning, end, or middle based on a certain condition
 - very efficient for solving problems with minimal space complexity as well
 
-
 - we have some sort of linear structure like an array or a string or a doubly/singly linked list 
 - we will be searching for a pair of values that meets a condition
 - use two references: 
