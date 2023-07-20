@@ -133,7 +133,7 @@ var maxArea = function(height) {
   return containerSize
 };
 
-console.log(maxArea([1,8,6,2,5,4,8,3,7]))
+//console.log(maxArea([1,8,6,2,5,4,8,3,7]))
 
 //console.log(maxArea([1,2]))
 
@@ -164,3 +164,29 @@ var findMaxAverage = function(nums, k) {
 };
 
 //===================
+
+// Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
+
+// Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
+
+var maxVowels = function(s, k) {
+    let p1 = 0
+    let p2 = k
+
+    let result = 0
+
+    while ( p2 < s.length + 1) {
+      const tempS = s.slice(p1, p2)
+      const tempCount = tempS.match(/[aeiou]/gi)?.length
+
+      if (tempCount > result) {
+        result = tempCount
+      }
+      p1++
+      p2++
+    }
+
+    return result
+};
+
+console.log(maxVowels('leetcode', 3)) // 2
