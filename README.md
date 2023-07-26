@@ -33,11 +33,13 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - [Binary search](#binary-search)
   - [Naive String Search](#naive-string-search)
 - [Section 11: Sorting Algorithms](#sorting-algorithms)
-  - Bubble Sort => do this 
-  <!-- - Section 12: Section sort => do this 
+  - [Built-in JS sort](#built-in-javascript-sort)
+  - Quick Sort
+  <!-- - Bubble Sort => do this 
+  - Section 12: Section sort => do this 
   - Section 13: Insertion sort => do this 
-  - Section 14: Comparing above 3 sorts
-  - Section 15: Merge sort (probs don't do)
+  - Section 14: Comparing above 3 sorts -->
+  <!-- - Section 15: Merge sort (probs don't do)
   - Section 16: Quick sort (probs don't do)
   - Section 17: Radix sort (don't do) -->
 - Section 18: Data structures intro (whats the best? where do they excel) => maybe don't do the rest? see how it goes after intro. 
@@ -855,3 +857,27 @@ const naiveStringSearch = (longString, shortString) => {
 
 ## Sorting Algorithms
 
+- sorting is the process of rearranging the items in a collection (e.g. an array) so that the items are in some kind of order
+- Examples: 
+  - sorting numbers from smallest to largest
+  - sorting names alphabetically
+  - sorting movies based on release year 
+  - sorting movies based on revenue 
+- there are many different techniques and ways to sort, different ones have their own advantages and disadvantages 
+
+### built-in javascript sort 
+  - `Array.sort()`:
+  - doesn't always work the way we think, i.e it sorts strings the way we do
+  - doesn't seem to sort numbers the way we'd imagine - it defaults to sorting based on unicode 
+  - you can tell `.sort()` how to sort by passing it an argument, an optional comparator function
+    - comparator looks at pairs of elements (a and b), determines their sort order based on the return value
+    - if it returns a negative number, a should come before b
+    - if it returns a positive number, a should come after b
+    - if it returns 0, a and b are the same as far as the sort is concerned
+````js
+function numberCompare(num1, num2) {
+  return num1 - num2
+}
+
+[6, 4, 15, 10].sort(numberCompare) // [4, 6, 10, 15]
+````
