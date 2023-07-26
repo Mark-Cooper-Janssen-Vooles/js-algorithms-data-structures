@@ -2,8 +2,6 @@
 
 Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
 
-Todo: 
-
 - [Section 2: Big O](#big-o-notation)
   - timing our code
   - official intro to big O
@@ -58,11 +56,11 @@ Todo:
 
 ## Big O Notation
 
-s2-bigO.js 
-
 - Whats the need for big O notation?
   - if we have two valid solutions to a problem, some are "better" and run faster, and this can matter at scale
   - leetcode for example compares them for speed 
+
+![big O graph](./bigO-graph.png)
 
 #### Timing our code 
 - We want code that is faster, less memory-intensive whilst still being readable. 
@@ -169,6 +167,8 @@ function printAllPairs(n) {
   - accessing elements in an array (by index) or object (by key) is constant 
   - in a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
     - i.e. if only constants happen in the loop, its O(n). but if another loop happens, its O(n ²)
+
+![big O graph](./bigO-graph.png)
 
 ### Space complexity 
 
@@ -813,4 +813,10 @@ const binarySearch = (arr, val) => {
   return -1
 }
 ````
+
+- big O of binary search:
+  - best case is O(1), if we find it straight away
+  - worst case is O(log n), also the average case as this is the trend. O(log n) is much better than O(n)
+
+---
 
