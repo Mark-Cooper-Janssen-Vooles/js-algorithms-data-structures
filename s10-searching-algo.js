@@ -50,22 +50,57 @@ const binarySearch = (arr, val) => {
   return -1
 }
 
-console.log(binarySearch([1, 2, 3], 3)) // 2
-console.log(binarySearch([1, 2, 3], 4)) // -1 
+// console.log(binarySearch([1, 2, 3], 3)) // 2
+// console.log(binarySearch([1, 2, 3], 4)) // -1 
 
-console.log(binarySearch([1,2,3,4,5],2)) // 1
-console.log(binarySearch([1,2,3,4,5],3)) // 2
-console.log(binarySearch([1,2,3,4,5],5)) // 4
-console.log(binarySearch([1,2,3,4,5],6)) // -1
-console.log(binarySearch([
-  5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
-  40, 44, 64, 79, 84, 86, 95, 96, 98, 99
-], 10)) // 2
-console.log(binarySearch([
-  5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
-  40, 44, 64, 79, 84, 86, 95, 96, 98, 99
-], 95)) // 16
-console.log(binarySearch([
-  5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
-  40, 44, 64, 79, 84, 86, 95, 96, 98, 99
-], 100)) // -1
+// console.log(binarySearch([1,2,3,4,5],2)) // 1
+// console.log(binarySearch([1,2,3,4,5],3)) // 2
+// console.log(binarySearch([1,2,3,4,5],5)) // 4
+// console.log(binarySearch([1,2,3,4,5],6)) // -1
+// console.log(binarySearch([
+//   5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
+//   40, 44, 64, 79, 84, 86, 95, 96, 98, 99
+// ], 10)) // 2
+// console.log(binarySearch([
+//   5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
+//   40, 44, 64, 79, 84, 86, 95, 96, 98, 99
+// ], 95)) // 16
+// console.log(binarySearch([
+//   5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
+//   40, 44, 64, 79, 84, 86, 95, 96, 98, 99
+// ], 100)) // -1
+
+//===============================================
+
+
+// - suppose you want to count the number of times a smaller string appears in a longer string 
+// - a straightforward approach involves checking pairs of characters individually
+// "harold said haha in hamburg"
+
+const naiveStringSearch = (longString, shortString) => {
+  let shortStringP = 0
+  let matchCount = 0
+
+  for (let i = 0; i < longString.length; i++) {
+    // console.log('long string:', longString[i])
+    // console.log('short strin:', shortString[shortStringP])
+
+    if (shortStringP === shortString.length - 1) {
+      if (longString[i] === shortString[shortStringP]) {
+        matchCount++
+      }
+      shortStringP = 0
+    }  
+
+    if (longString[i] === shortString[shortStringP]) {
+      shortStringP++
+    } else if (longString[i] !== shortString[shortStringP]) {
+      shortStringP = 0
+    }
+  }
+
+  return matchCount
+}
+
+console.log(naiveStringSearch("harold said haha in hamburg", "haha")) // 1
+console.log(naiveStringSearch("lorie loled lol olol", "lol")) // 3

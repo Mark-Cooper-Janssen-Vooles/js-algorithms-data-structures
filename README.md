@@ -31,16 +31,18 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
 - [Section 10: Searching algorithms](#searching-algorithms) 
   - [Linear search](#linear-search)
   - [Binary search](#binary-search)
-  - Section 11: Bubble Sort => do this 
-  - Section 12: Section sort => do this 
+  - [Naive String Search](#naive-string-search)
+- [Section 11: Sorting Algorithms](#sorting-algorithms)
+  - Bubble Sort => do this 
+  <!-- - Section 12: Section sort => do this 
   - Section 13: Insertion sort => do this 
   - Section 14: Comparing above 3 sorts
   - Section 15: Merge sort (probs don't do)
   - Section 16: Quick sort (probs don't do)
-  - Section 17: Radix sort (don't do)
+  - Section 17: Radix sort (don't do) -->
 - Section 18: Data structures intro (whats the best? where do they excel) => maybe don't do the rest? see how it goes after intro. 
   - Section 19: singly linked lists
-  - Section 20: doubly linked lists (can skip this if we do singly linked)
+  <!-- - Section 20: doubly linked lists (can skip this if we do singly linked) -->
   - Section 21: stacks + queues 
   - Section 22: Binary search trees 
   - Section 23: tree traversal 
@@ -816,7 +818,40 @@ const binarySearch = (arr, val) => {
 
 - big O of binary search:
   - best case is O(1), if we find it straight away
-  - worst case is O(log n), also the average case as this is the trend. O(log n) is much better than O(n)
+  - worst case is O(log n), also the average case as this is the trend. O(log n) is much better than O(n), almost the same as O(1)
 
 ---
+
+### Naive String Search
+
+- suppose you want to count the number of times a smaller string appears in a longer string 
+- a straightforward approach involves checking pairs of characters individually
+
+````js
+const naiveStringSearch = (longString, shortString) => {
+  let shortStringP = 0
+  let matchCount = 0
+
+  for (let i = 0; i < longString.length; i++) {
+    if (shortStringP === shortString.length - 1) {
+      if (longString[i] === shortString[shortStringP]) {
+        matchCount++
+      }
+      shortStringP = 0
+    }  
+
+    if (longString[i] === shortString[shortStringP]) {
+      shortStringP++
+    } else if (longString[i] !== shortString[shortStringP]) {
+      shortStringP = 0
+    }
+  }
+
+  return matchCount
+}
+````
+
+---
+
+## Sorting Algorithms
 
