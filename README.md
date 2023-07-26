@@ -34,7 +34,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - [Naive String Search](#naive-string-search)
 - [Section 11: Sorting Algorithms](#sorting-algorithms)
   - [Built-in JS sort](#built-in-javascript-sort)
-  - Quick Sort
+  - [Quick Sort](#quick-sort)
   <!-- - Bubble Sort => do this 
   - Section 12: Section sort => do this 
   - Section 13: Insertion sort => do this 
@@ -881,3 +881,6 @@ function numberCompare(num1, num2) {
 
 [6, 4, 15, 10].sort(numberCompare) // [4, 6, 10, 15]
 ````
+
+### Quick Sort
+
