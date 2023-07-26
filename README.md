@@ -790,3 +790,27 @@ console.log(linearSearch([1, 2, 3], 4)) // -1
   - if its after, we then make all thats after the new array. and again check the mid point of the new set. is it before or after?
   - the process repeats itself until it finds the answer 
 
+````js
+const binarySearch = (arr, val) => {
+  let leftP = 0
+  let rightP = arr.length - 1
+
+  while (leftP < rightP) {
+    const midP = Math.ceil((rightP + leftP) / 2)
+    if (arr[midP] === val) {
+      return midP
+    }
+
+    if (arr[midP] < val) {
+      leftP = midP
+    }
+
+    if (arr[midP] > val) {
+      rightP = midP
+    }
+  }
+
+  return -1
+}
+````
+
