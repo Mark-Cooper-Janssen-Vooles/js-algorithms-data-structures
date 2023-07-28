@@ -220,7 +220,7 @@ function double(arr) {
   - i.e. if our number is 8. we divide by 2, 4. divide by 2, 2. divide by 2, 1. so log(8) = 3
 
 - logarithm complexity:
-  - logarithm time complexity os great. O(log n) is only slightly more than O(1). better than O(n), O(nlog n) and O(n²).
+  - logarithm time complexity is great. O(log n) is only slightly more than O(1). better than O(n), O(nlog n) and O(n²).
 
 
 - certain searching algorithms have log time complexity
@@ -252,14 +252,14 @@ function double(arr) {
 
 - arrays are an ordered list
 - When to use:
-  - when you need order 
+  - when you need order
   - when you need fast access / insertion and removal (sort of...)
 - big O of arrays:
   - insertion - it depends...
   - removal - it depends...
   - searching - O(n)
   - access - O(1)
-- insertion: 
+- insertion:
   - if you add on to the end, its O(1) (i.e. `arr.push('test')`)
   - if you try to add it do the beginning of the array, everything needs to be re-indexed. therefore its O(n), i.e. `arr.shift()`
 - removal:
@@ -390,7 +390,6 @@ Ask yourself these questions:
 
 1. devise a plan for solving problems 
 2. master common problem solving patterns
-
 
 some patterns:
 - frequency counter
@@ -587,7 +586,7 @@ function maxSubarraySum2(arr, num) {
 
 - This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data 
 - this pattern can tremendously decrease time complexity
-  - sorthing algorithms cover this in-depth, i.e. quick sort of merge sort are examples 
+  - sorting algorithms cover this in-depth, i.e. quick sort / merge sort are examples 
   - depending on the problem, can be a significant helper
 
 - example:
@@ -927,4 +926,4 @@ const pivotHelper = (arr, startIndex = 0, endIndex = arr.length - 1) => {
 - Big O of quicksort:
   - Time complexity (best and average) is O(n log n)
   - Time complexity (worst) is O(n²)
-  
+    - i.e. if array is already sorted, whole thing will need to be 
