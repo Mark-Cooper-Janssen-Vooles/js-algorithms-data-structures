@@ -884,3 +884,37 @@ function numberCompare(num1, num2) {
 
 ### Quick Sort
 
+- split up array until we hit arrays that are 0 or 1 item long, i.e. they are sorted
+- works by selecting one element (any, could be the first one, 0th index) (Called the 'pivot') and finding the index where the pivot should end up in the sorted array. 
+  - move all numbers lower than that element to the left of that element, and all the numbers greater than that element to the right of that element.
+  - not sort them all, just move them to the correct side. 
+  - we know the pivot number is in the right index - but we're unsure about everything else 
+- once we know the pivot is positioned correctly, quick sort can be applied on either side of the pivot. 
+
+Pivot helper:
+- do the above and do it in place (do not create a new array)
+- when complete, the helper should return the index of the pivot
+
+- the runtime of quicksort can change depending on where the pivot is chosen. for simplicity we'll always choose the pivot to be the first element
+````js
+const pivotHelper = (arr, startIndex = 0, endIndex = arr.length - 1) => {
+  const pivot = arr[startIndex]
+  let pivotIndex = startIndex
+
+  for (let i = start + 1; i < arr.length; i++) {
+    if (pivot > arr[i]) {
+      pivotIndex++
+      // everything smaller than pivot moves left of pivot:
+      const itemRemovedArr = arr.splice(i, 1)
+      arr.splice(pivotIndex, 0, ...itemRemovedArr)
+    }
+  }
+
+  // move pivot into correct position:
+  const pivotItemArr = arr.splice(startIndex, 1)
+  arr.splice(pivotIndex, 0, ...pivotItemArr)
+
+  return pivotIndex
+}
+````
+
