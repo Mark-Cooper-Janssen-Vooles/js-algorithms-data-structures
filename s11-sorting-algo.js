@@ -22,8 +22,8 @@ const pivotHelper = (arr, startIndex = 0, endIndex = arr.length - 1) => {
   const pivot = arr[startIndex]
   let pivotIndex = startIndex
 
-  for (let i = start + 1; i < arr.length; i++) {
-    console.log(i, pivot, arr[i], pivot > arr[i])
+  for (let i = startIndex + 1; i < arr.length; i++) {
+    //console.log(i, pivot, arr[i], pivot > arr[i])
     if (pivot > arr[i]) {
       pivotIndex++
       // everything smaller than pivot moves left of pivot:
@@ -39,6 +39,40 @@ const pivotHelper = (arr, startIndex = 0, endIndex = arr.length - 1) => {
   return pivotIndex
 }
 
-console.log(arr)
-console.log(pivotHelper(arr)) //4
-console.log(arr)
+// console.log(arr)
+// console.log(pivotHelper(arr)) //4
+// console.log(arr)
+
+// - Quick sort Pseudocode
+//   - calls the pivot helper on the array, gets the index back
+//   - when the helper returns the updated pivot index, we recursively call the pivot helper on the subarray to the left of that index, and the subarray to the right of that index
+//   - your base case occurs when the subarray has less than two elements
+
+// const quickSort = (arr, left = 0, right = arr.length - 1) => {
+//   if (left < right) {
+//     let pivotIndex = pivotHelper(arr, left, right) 
+//     // left => this fires off into its own callstack
+//     quickSort(arr, left, pivotIndex - 1) // as this runs, it recursively calls this function with a smaller subArray (the left and right get smaller) 
+//     // right => called after left resolves
+//     quickSort(arr, pivotIndex + 1, right)
+//   }
+
+//   return arr
+// }
+
+const quickSort = (arr, left = 0, right = arr.length - 1) => {
+  console.log(arr)
+  if (left < right) {
+    let pivotIndex = pivotHelper(arr, left, right) 
+    console.log(pivotIndex)
+    // left => this fires off into its own callstack
+    quickSort(arr, left, pivotIndex - 1) // as this runs, it recursively calls this function with a smaller subArray (the left and right get smaller) 
+    // right => called after left resolves
+    quickSort(arr, pivotIndex + 1, right)
+  }
+
+  return arr
+}
+
+console.log(quickSort([4, 6, 9, 3, 2, 1, 5]))
+

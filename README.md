@@ -901,7 +901,7 @@ const pivotHelper = (arr, startIndex = 0, endIndex = arr.length - 1) => {
   const pivot = arr[startIndex]
   let pivotIndex = startIndex
 
-  for (let i = start + 1; i < arr.length; i++) {
+  for (let i = startIndex + 1; i < arr.length; i++) {
     if (pivot > arr[i]) {
       pivotIndex++
       // everything smaller than pivot moves left of pivot:
@@ -918,3 +918,13 @@ const pivotHelper = (arr, startIndex = 0, endIndex = arr.length - 1) => {
 }
 ````
 
+- Quick sort Pseudocode
+  - calls the pivot helper on the array, gets the index back
+  - when the helper returns the updated pivot index, we recursively call the pivot helper on the subarray to the left of that index, and the subarray to the right of that index
+  - your base case occurs when the subarray has less than two elements
+
+
+- Big O of quicksort:
+  - Time complexity (best and average) is O(n log n)
+  - Time complexity (worst) is O(n²)
+  
