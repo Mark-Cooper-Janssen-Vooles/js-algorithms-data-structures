@@ -36,6 +36,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - [Built-in JS sort](#built-in-javascript-sort)
   - [Bubble Sort](#bubble-sort)
   - [Selection Sort](#selection-sort)
+  - [Insertion Sort](#insertion-sort)
   - [Quick Sort](#quick-sort)
   <!-- - Bubble Sort => do this 
   - Section 12: Section sort => do this 
@@ -962,6 +963,9 @@ console.log(selectionSort([2, 78, 1, 22, 55, 3]))
 
 - big O Complexity of selection Sort: 
   - in general O(n²)
+
+
+### Insertion Sort
 
 
 ### Quick Sort
