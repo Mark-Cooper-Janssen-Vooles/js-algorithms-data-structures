@@ -1,3 +1,39 @@
+// bubblesort 
+
+// start looping with a variable called i. at the end of the array, towards the beginning 
+// start an inner loop with a variable called j from the beginning until i - 1
+// if arr[j] is greater than arr[j+1], swap those two values 
+// return sorted array
+
+function swap(arr, index1, index2) {
+  let temp = arr[index1]
+  arr[index1] = arr[index2]
+  arr[index2] = temp
+}
+
+const bubbleSort = (arr) => {
+  for (let i = arr.length - 1; i > -1; i--) {
+    // loop over arr arr.length times
+    for (let j = 0; j < i; j++) {
+      // loop over arr.length within loop
+      //console.log(arr[j], arr[j+1])
+      if (arr[j] > arr[j+1]) {
+        // swap them
+        swap(arr, j, j+1)
+      }
+    }
+  }
+
+  return arr
+}
+
+console.log(bubbleSort([1, 3, 5, 2]))
+
+console.log(bubbleSort([1, 99, 654, 29, 666, 3, 5, 2]))
+
+
+// =======================================
+
 // quick sort 
 
 // - move all numbers lower than that element to the left of that element, and all the numbers greater than that element to the right of that element.
@@ -74,5 +110,5 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
   return arr
 }
 
-console.log(quickSort([4, 6, 9, 3, 2, 1, 5]))
+//console.log(quickSort([4, 6, 9, 3, 2, 1, 5]))
 

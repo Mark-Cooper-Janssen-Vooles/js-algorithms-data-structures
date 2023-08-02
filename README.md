@@ -34,6 +34,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - [Naive String Search](#naive-string-search)
 - [Section 11: Sorting Algorithms](#sorting-algorithms)
   - [Built-in JS sort](#built-in-javascript-sort)
+  - [Bubble Sort](#bubble-sort)
   - [Quick Sort](#quick-sort)
   <!-- - Bubble Sort => do this 
   - Section 12: Section sort => do this 
@@ -880,6 +881,45 @@ function numberCompare(num1, num2) {
 
 [6, 4, 15, 10].sort(numberCompare) // [4, 6, 10, 15]
 ````
+
+### Bubble Sort 
+
+- not super efficient or commonly used. but good to build on
+- a sorting algorithm where the largest values bubble to the top (i.e. to end of array)
+  - as we loop through each item, we check with the one in front of it and see if its larger or smaller than it. if it is large, we swap them, until the larger value goes to the end 
+  - through every-run x throughs, we know the last x items are sorted
+
+- since we need to compare two items and swap them, i.e: 
+````js
+function swap(arr, index1, index2) {
+  let temp = arr[index1]
+  arr[index1] = arr[index2]
+  arr[index2] = temp
+}
+
+const bubbleSort = (arr) => {
+  for (let i = arr.length - 1; i > -1; i--) {
+    // loop over arr arr.length times
+    for (let j = 0; j < i; j++) {
+      // loop over arr.length within loop
+      if (arr[j] > arr[j+1]) {
+        // swap them
+        swap(arr, j, j+1)
+      }
+    }
+  }
+
+  return arr
+}
+
+console.log(bubbleSort([1, 3, 5, 2]))
+````
+- in the above solution, we start i at the end and go down. as i gets less each time, j doesn't need to know about the other values as they have already been sorted. 
+  - i.e. [37, 45, 29, 8], the first pass will put 45 at the end. we no longer need our sort to look at that last index, so the condition for the second loop is that j < i
+  - this avoids needless comparisons, which would happen if our outer loop was a simple `i = 0; i < arr.length; i++`, we want to shrink the number of comparisons we make as we're sorting as we go.
+
+
+
 
 ### Quick Sort
 
