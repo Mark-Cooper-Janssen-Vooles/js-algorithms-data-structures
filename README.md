@@ -683,9 +683,9 @@ function countDownIteration(num) {
   - when we write recursive functions, we keep pushing new functions onto the call stack
 ````js
 function sumRange(num) {
-console.log(num)
-if (num === 1) return 1
-return num + sumRange(num-1)
+  console.log(num)
+  if (num === 1) return 1
+  return num + sumRange(num-1)
 }
 sumRange(3)
 ````
