@@ -35,6 +35,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
 - [Section 11: Sorting Algorithms](#sorting-algorithms)
   - [Built-in JS sort](#built-in-javascript-sort)
   - [Bubble Sort](#bubble-sort)
+  - [Selection Sort](#selection-sort)
   - [Quick Sort](#quick-sort)
   <!-- - Bubble Sort => do this 
   - Section 12: Section sort => do this 
@@ -924,6 +925,8 @@ console.log(bubbleSort([1, 3, 5, 2]))
   - in general O(n²)
   - if no swaps, its O(n)
 
+
+### Selection Sort 
 
 
 
