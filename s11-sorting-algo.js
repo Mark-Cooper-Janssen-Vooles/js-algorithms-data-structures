@@ -50,9 +50,45 @@ const bubbleSort = (arr) => {
 
 // console.log(bubbleSort([1, 3, 5, 2]))
 // console.log(bubbleSort([1, 99, 654, 29, 666, 3, 5, 2]))
+// console.log(bubbleSort([1, 2, 3, 4, 5, 7, 6]))
 
-console.log(bubbleSort([1, 2, 3, 4, 5, 7, 6]))
 
+// =======================================
+ 
+// Selection Sort 
+
+// store first element as the smallest value you've seen so far
+// compare this item to the next item in the array until you find a smaller number
+// if a smaller number is found, make that the new 'minimum' and continue until the end of the array
+// if the 'minimum' is not the value (index) you initially began with, swap the two values 
+// repeat this with the next element until the array is sorted 
+
+const selectionSort = (arr) => {
+  let smallestIndex = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i+1; j < arr.length; j++) {
+      //console.log(arr, arr[smallestIndex], arr[j])
+      if (arr[smallestIndex] > arr[j]) {
+        smallestIndex = j
+      }
+    }
+
+    if (arr[i] > arr[smallestIndex]) {
+      // swap:
+      let temp = arr[smallestIndex]
+      arr[smallestIndex] = arr[i]
+      arr[i] = temp
+    } else {
+    }
+
+    smallestIndex = i + 1
+  }
+
+  return arr
+}
+
+console.log(selectionSort([2, 78, 1, 22, 55, 3]))
 
 // =======================================
 

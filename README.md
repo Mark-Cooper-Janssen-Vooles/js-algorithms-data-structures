@@ -928,6 +928,9 @@ console.log(bubbleSort([1, 3, 5, 2]))
 
 ### Selection Sort 
 
+- similar to bubble sort, but instead of first placing large values into sorted at end of the array, we place small values into the sorted position 
+  - sorted data is accumulated at the beginning
+- we iterate through the array looking at the element and the one after it, taking note of what is the smallest element. when we get to the end, we swap the smallest element with whatever was at index 0. now index 0 is sorted, and we look from index 1 onwards. 
 
 
 
