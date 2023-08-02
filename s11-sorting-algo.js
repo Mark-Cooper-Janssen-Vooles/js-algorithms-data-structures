@@ -11,25 +11,47 @@ function swap(arr, index1, index2) {
   arr[index2] = temp
 }
 
+// const bubbleSort = (arr) => {
+//   for (let i = arr.length - 1; i > -1; i--) {
+//     // loop over arr arr.length times
+//     for (let j = 0; j < i; j++) {
+//       // loop over arr.length within loop
+//       //console.log(arr[j], arr[j+1])
+//       if (arr[j] > arr[j+1]) {
+//         // swap them
+//         swap(arr, j, j+1)
+//       }
+//     }
+//   }
+
+//   return arr
+// }
+
+// optimised version:
 const bubbleSort = (arr) => {
+  let noSwaps
   for (let i = arr.length - 1; i > -1; i--) {
+    noSwaps = true
     // loop over arr arr.length times
     for (let j = 0; j < i; j++) {
       // loop over arr.length within loop
-      //console.log(arr[j], arr[j+1])
+      console.log(arr, arr[j], arr[j+1])
       if (arr[j] > arr[j+1]) {
         // swap them
         swap(arr, j, j+1)
+        noSwaps = false
       }
     }
+    if (noSwaps) break
   }
 
   return arr
 }
 
-console.log(bubbleSort([1, 3, 5, 2]))
+// console.log(bubbleSort([1, 3, 5, 2]))
+// console.log(bubbleSort([1, 99, 654, 29, 666, 3, 5, 2]))
 
-console.log(bubbleSort([1, 99, 654, 29, 666, 3, 5, 2]))
+console.log(bubbleSort([1, 2, 3, 4, 5, 7, 6]))
 
 
 // =======================================

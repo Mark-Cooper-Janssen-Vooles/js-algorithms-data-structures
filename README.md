@@ -2,7 +2,7 @@
 
 Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
 
-- [Section 2: Big O](#big-o-notation)
+- [Section 2: Big O... O(n²)](#big-o-notation)
   - timing our code
   - official intro to big O
   - space complexity
@@ -917,6 +917,13 @@ console.log(bubbleSort([1, 3, 5, 2]))
 - in the above solution, we start i at the end and go down. as i gets less each time, j doesn't need to know about the other values as they have already been sorted. 
   - i.e. [37, 45, 29, 8], the first pass will put 45 at the end. we no longer need our sort to look at that last index, so the condition for the second loop is that j < i
   - this avoids needless comparisons, which would happen if our outer loop was a simple `i = 0; i < arr.length; i++`, we want to shrink the number of comparisons we make as we're sorting as we go.
+
+- theres an optimised version in `s11-sorting-algo.js` which checks if it doesn't need to be swapped anymore
+
+- big O Complexity of bubbleSort: 
+  - in general O(n²)
+  - if no swaps, its O(n)
+
 
 
 
