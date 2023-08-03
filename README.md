@@ -967,6 +967,14 @@ console.log(selectionSort([2, 78, 1, 22, 55, 3]))
 
 ### Insertion Sort
 
+- similar to bubble / selection sort, however insertion does actually do well in certain situations
+- it builds up the sort by gradually creating a larger left side which is always sorted 
+  - places it where it should go in the sorted half 
+  - [5, 3, 4, 1] => 5 is sorted side
+  - [3, 5, 4, 1] => 3, 5 is sorted side
+  - [3, 4, 5, 1] => 3, 4, 5 is sorted side 
+  - [1, 3, 4, 5] => all is sorted now
+- takes an element from the right, compares it to the left side, and inserts it where it should be 
 
 ### Quick Sort
 

@@ -88,9 +88,45 @@ const selectionSort = (arr) => {
   return arr
 }
 
-console.log(selectionSort([2, 78, 1, 22, 55, 3]))
+//console.log(selectionSort([2, 78, 1, 22, 55, 3]))
 
 // =======================================
+
+// Insertion Sort
+
+// start by picking the second element in the array
+// now compare the second element with the one before it and swap if necessary 
+// continue to the next element and if it is in the incorrect order, iterate through the sorted portion (ie the left side) to place the element in the correct place 
+// repeact until the array is sorted 
+
+const insertionSort = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    // when i = 0
+    if (i === 0) {
+      if (arr[i] > arr[i+1]) {
+        // swap:
+        let temp = arr[i]
+        arr[i] = arr[i+1]
+        arr[i+1] = temp
+      }
+    }
+
+    // when i >= 2, left sorted area is 2 or greater. i.e. 2, 78
+    for (let j = i; j > -1; j--) {
+      // compare j+1 with j, if larger swap, iterate down to 0th index
+      if (arr[j] > arr[j+1]) {
+        // swap:
+        let temp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+      }
+    }
+  }
+}
+
+console.log(insertionSort([2, 78, 1, 22, 55, 3])) // 1, 2, 3, 22, 55, 78
+
+// ======================
 
 // quick sort 
 
