@@ -976,6 +976,35 @@ console.log(selectionSort([2, 78, 1, 22, 55, 3]))
   - [1, 3, 4, 5] => all is sorted now
 - takes an element from the right, compares it to the left side, and inserts it where it should be 
 
+````js
+const insertionSort = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    // when i = 0
+    if (i === 0) {
+      if (arr[i] > arr[i+1]) {
+        // swap:
+        let temp = arr[i]
+        arr[i] = arr[i+1]
+        arr[i+1] = temp
+      }
+    }
+
+    // when i >= 2, left sorted area is 2 or greater. i.e. 2, 78
+    for (let j = i; j > -1 && arr[j] > arr[j+1]; j--) {
+      // compare j+1 with j, if larger swap, iterate down to 0th index
+      if (arr[j] > arr[j+1]) {
+        // swap:
+        let temp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+      }
+    }
+  }
+
+  return arr
+}
+````
+
 ### Quick Sort
 
 - split up array until we hit arrays that are 0 or 1 item long, i.e. they are sorted

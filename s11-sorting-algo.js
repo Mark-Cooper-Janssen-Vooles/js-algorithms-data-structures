@@ -113,6 +113,7 @@ const insertionSort = (arr) => {
 
     // when i >= 2, left sorted area is 2 or greater. i.e. 2, 78
     for (let j = i; j > -1; j--) {
+      // for (let j = i; j > -1 && arr[j] > arr[j+1]; j--) { // => better, only runs loop on the if condition?!
       // compare j+1 with j, if larger swap, iterate down to 0th index
       if (arr[j] > arr[j+1]) {
         // swap:
@@ -127,7 +128,7 @@ const insertionSort = (arr) => {
 }
 
 console.log(insertionSort([2, 78, 1, 22, 55, 3])) // 1, 2, 3, 22, 55, 78
-
+console.log(insertionSort([2, 1, 9, 76, 4])) 
 // ======================
 
 // quick sort 
