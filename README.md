@@ -924,7 +924,7 @@ console.log(bubbleSort([1, 3, 5, 2]))
 
 - big O Complexity of bubbleSort: 
   - in general O(n²)
-  - if no swaps, its O(n)
+  - best case, ie. no swaps, its O(n)
 
 
 ### Selection Sort 
@@ -963,6 +963,7 @@ console.log(selectionSort([2, 78, 1, 22, 55, 3]))
 
 - big O Complexity of selection Sort: 
   - in general O(n²)
+  - best case: O(n²)
 
 
 ### Insertion Sort
@@ -979,17 +980,6 @@ console.log(selectionSort([2, 78, 1, 22, 55, 3]))
 ````js
 const insertionSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
-    // when i = 0
-    if (i === 0) {
-      if (arr[i] > arr[i+1]) {
-        // swap:
-        let temp = arr[i]
-        arr[i] = arr[i+1]
-        arr[i+1] = temp
-      }
-    }
-
-    // when i >= 2, left sorted area is 2 or greater. i.e. 2, 78
     for (let j = i; j > -1 && arr[j] > arr[j+1]; j--) {
       // compare j+1 with j, if larger swap, iterate down to 0th index
       if (arr[j] > arr[j+1]) {
@@ -1004,6 +994,20 @@ const insertionSort = (arr) => {
   return arr
 }
 ````
+
+- time complexity: worse case O(n²)
+  - if algorithm has to work as it receieves data live, insertion sort is good at this
+- best case O(n)
+
+#### Comparing selection sort, bubble sort and insertion sort 
+- insertion and bubble sort work quite well when data is almost sorted
+  - selection sort not so well here 
+- if data is added on the fly, insertion sort is best for this (i.e. a running sort)
+
+- sorting is fundamental! 
+- they're all roughly equivalent 
+- all have average time complexities that are n squared
+- we can do better but we need more complex algorthms
 
 ### Quick Sort
 

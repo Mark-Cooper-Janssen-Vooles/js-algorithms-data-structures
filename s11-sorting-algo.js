@@ -102,14 +102,14 @@ const selectionSort = (arr) => {
 const insertionSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     // when i = 0
-    if (i === 0) {
-      if (arr[i] > arr[i+1]) {
-        // swap:
-        let temp = arr[i]
-        arr[i] = arr[i+1]
-        arr[i+1] = temp
-      }
-    }
+    // if (i === 0) {
+    //   if (arr[i] > arr[i+1]) {
+    //     // swap:
+    //     let temp = arr[i]
+    //     arr[i] = arr[i+1]
+    //     arr[i+1] = temp
+    //   }
+    // }
 
     // when i >= 2, left sorted area is 2 or greater. i.e. 2, 78
     for (let j = i; j > -1; j--) {
