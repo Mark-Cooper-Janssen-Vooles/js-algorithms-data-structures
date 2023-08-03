@@ -122,6 +122,8 @@ const insertionSort = (arr) => {
       }
     }
   }
+
+  return arr
 }
 
 console.log(insertionSort([2, 78, 1, 22, 55, 3])) // 1, 2, 3, 22, 55, 78
