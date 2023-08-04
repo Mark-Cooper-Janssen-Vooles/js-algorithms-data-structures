@@ -38,14 +38,10 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - [Selection Sort](#selection-sort)
   - [Insertion Sort](#insertion-sort)
   - [Quick Sort](#quick-sort)
-  <!-- - Bubble Sort => do this 
-  - Section 12: Section sort => do this 
-  - Section 13: Insertion sort => do this 
-  - Section 14: Comparing above 3 sorts -->
-  <!-- - Section 15: Merge sort (probs don't do)
-  - Section 16: Quick sort (probs don't do)
+  <!-- - Section 15: Merge sort (don't do)
   - Section 17: Radix sort (don't do) -->
-- Section 18: Data structures intro (whats the best? where do they excel) => maybe don't do the rest? see how it goes after intro. 
+- [Section 18: Data structures intro](#data-structures) 
+(whats the best? where do they excel) => maybe don't do the rest? see how it goes after intro. 
   - Section 19: singly linked lists
   <!-- - Section 20: doubly linked lists (can skip this if we do singly linked) -->
   - Section 21: stacks + queues 
@@ -1054,4 +1050,12 @@ const pivotHelper = (arr, startIndex = 0, endIndex = arr.length - 1) => {
 - Big O of quicksort:
   - Time complexity (best and average) is O(n log n)
   - Time complexity (worst) is O(n²)
-    - i.e. if array is already sorted, whole thing will need to be 
+    - i.e. if array is already sorted, whole thing will need to be gone through, and then all the comparisons. this is what happens when we do the first pivot on the index of 0. 
+
+  
+---
+
+## Data Structures
+
+
+
