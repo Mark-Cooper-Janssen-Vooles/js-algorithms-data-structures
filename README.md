@@ -42,7 +42,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - Section 17: Radix sort (don't do) -->
 - [Section 18: Data structures intro](#data-structures) 
 (whats the best? where do they excel) => maybe don't do the rest? see how it goes after intro. 
-  - Section 19: singly linked lists
+  - [Section 19: singly linked lists](#singly-linked-lists)
   <!-- - Section 20: doubly linked lists (can skip this if we do singly linked) -->
   - Section 21: stacks + queues (do)
   - Section 22: Binary search trees (do)
@@ -1101,3 +1101,31 @@ class Student {
   }
 }
 ````
+
+class methods:
+- uses the static keyword infront of the definition
+- pertinent to classes, but not necessarily instances of that class 
+- MDN docs: the static keyword defines a static method for a class. static methods are called without instantiating their class and cannot be called through a class instance. Static methods are often used to created utility unfunctions for an application
+````js
+class Student {
+  constructor(firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+
+  static enrollStudents(...students) {
+    // send email to students here
+    // i.e. not related to an instance, doesn't use 'this'
+    return 'ENROLLING STUDENTS!'
+  }
+}
+
+let firstStudent = new Student('john', 'smith')
+firstStudent.firstName //'john'
+firstStudent.enrolStudents('bill', 'ed', 'imran') // CANNOT DO, you must do:
+Student.enrolStudents('bill','ed','imran') // => on the class itself
+````
+
+---
+
+## Singly Linked Lists
