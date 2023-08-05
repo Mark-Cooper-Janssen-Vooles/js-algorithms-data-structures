@@ -44,10 +44,10 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
 (whats the best? where do they excel) => maybe don't do the rest? see how it goes after intro. 
   - Section 19: singly linked lists
   <!-- - Section 20: doubly linked lists (can skip this if we do singly linked) -->
-  - Section 21: stacks + queues 
-  - Section 22: Binary search trees 
-  - Section 23: tree traversal 
-  - Section 24: Binary heaps (similar to trees)
+  - Section 21: stacks + queues (do)
+  - Section 22: Binary search trees (do)
+  - Section 23: tree traversal (do)
+  <!-- - Section 24: Binary heaps (similar to trees) -->
   - Section 25: Hash tables 
   - Section 26: Graphs 
   - Section 27: Graph traversal 
@@ -1057,5 +1057,34 @@ const pivotHelper = (arr, startIndex = 0, endIndex = arr.length - 1) => {
 
 ## Data Structures
 
+- What do they do? What makes something a data structure?
+  - Data structures are collections of values, the relationships among them, and the functions or operations that can be applied to the data 
+
+- different data structures excel at different things
+  - some are highly specialized
+  - others are more generally used (i.e. an array)
+
+- if you've worked with the DOM, you've interacted with a tree data structure 
+
+### ES 2015 Class Syntax
+
+- a class is a blueprint for creating objects with pre-defined properties and methods 
+  - JS classes are primarily syntactical sugar over JS's existing prototype-based inheritance (JS has never been truly object oriented)
+- we will implemented data structures as classes
+
+
+- the method to create new objects must be called constructor 
+- the class keyword creates a constant, so you can not redefine it
+````js
+class Student {
+  constructor(firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+}
+
+let firstStudent = new Student('john', 'smith')
+let secondStudent = new Student('mary', 'parker')
+````
 
 
