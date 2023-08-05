@@ -1087,4 +1087,17 @@ let firstStudent = new Student('john', 'smith')
 let secondStudent = new Student('mary', 'parker')
 ````
 
+instance methods:
+- act on the individual instance of the class 
+````js
+class Student {
+  constructor(firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
 
+  fullName() { // this is the instance method
+    return `your fullname is ${this.firstName} ${this.lastName}`
+  }
+}
+````
