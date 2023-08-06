@@ -46,11 +46,11 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   <!-- - Section 20: doubly linked lists (can skip this if we do singly linked) -->
   - Section 21: stacks + queues (do)
   - Section 22: Binary search trees (do)
-  - Section 23: tree traversal (do)
+  <!-- - Section 23: tree traversal (do) -->
   <!-- - Section 24: Binary heaps (similar to trees) -->
   - Section 25: Hash tables 
   - Section 26: Graphs 
-  - Section 27: Graph traversal 
+  <!-- - Section 27: Graph traversal  -->
   - Section 28: Dijkstra's algorithm
   - Section 29: Dynamic programming 
   - Section 30: The wild west 
@@ -1129,3 +1129,4 @@ Student.enrolStudents('bill','ed','imran') // => on the class itself
 ---
 
 ## Singly Linked Lists
+
