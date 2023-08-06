@@ -1147,3 +1147,10 @@ Comparisons with Arrays
 - random access is not allowed in lists 
 - in arrays insertion and deletion can be expensive due to re-indexing 
 - arrays elements can quickly be accessed at specific index
+
+
+### Push
+- adds a node to the end of the singly linked list, i.e. replaces the tail 
+
+### Pop 
+- removes a node from the end of the linked list
