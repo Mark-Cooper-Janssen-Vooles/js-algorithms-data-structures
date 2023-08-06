@@ -1130,3 +1130,20 @@ Student.enrolStudents('bill','ed','imran') // => on the class itself
 
 ## Singly Linked Lists
 
+- a linked list is a data structure that stores any data (called a node) and contains a head, tail and length property. 
+  - its ordered like an array
+  - in an array, every item is indexed 
+  - a linked lists consists of nodes, and each node has a value and a pointer to another node or null (there is no index)
+  - i.e.: `4 -> 6 -> 8 -> 2 -> null`, where 4 is the head, 2 is the tail and the length is 4.
+    - a doubly linked list also has a connection to the previous node 
+
+- if we want to search for something in a linked list, we start at the head and then keep checking till we find it 
+- if we want to insert something at position 3, we keep traversing until we get to 2 and then insert it in afterwards
+  - if we want a new head, we can do that easily and just link it, if we wanted to do it in an array, the whole array would need to be re-indexed. 
+
+Comparisons with Arrays
+- lists do not have indexes, arrays are indexed in order
+- lists connected via nodes with a next pointer
+- random access is not allowed in lists 
+- in arrays insertion and deletion can be expensive due to re-indexing 
+- arrays elements can quickly be accessed at specific index
