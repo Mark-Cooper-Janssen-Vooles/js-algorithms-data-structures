@@ -1164,3 +1164,9 @@ Comparisons with Arrays
 ### Get 
 - retrieving a node by its positioni n the linked list 
 - i.e. give it 0 it should get the head, give it 2 and it gets the 3rd item 
+
+### Set 
+- change the value of a node based on its position in the linked list
+  - accepts a value and an index
+  - use your `get` function to find the specific node 
+  - if the node is not found, return false

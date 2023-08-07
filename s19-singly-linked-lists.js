@@ -81,16 +81,23 @@ class SinglyLinkedList {
   }
 
   get(index) {
-    if (index + 1 > this.length) return undefined
+    if (index + 1 > this.length || index < 0) return undefined
     if (index === 0) return this.head
 
     let node = this.head
     for (let i = 0; i < index; i++) {
-      //console.log(i, node.next)
       node = node.next
     }
 
     return node
+  }
+
+  set(index, value) {
+    let existingNode = this.get(index)
+    if (!existingNode) return false
+    existingNode.val = value 
+
+    return true
   }
 }
 
@@ -105,6 +112,8 @@ list.push('hmm')
 
 //list.unshift('hi')
 
-console.log(list.get(4))
+//console.log(list.get(4))
 
-//console.log(list)
+console.log(list)
+console.log(list.set(5, 'bye'))
+console.log(list)
