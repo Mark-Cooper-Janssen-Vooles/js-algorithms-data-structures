@@ -1157,3 +1157,6 @@ Comparisons with Arrays
 
 ### Shift
 - removes a node from the beginning of the Linked list!
+
+### Unshift 
+- adding a new node to the beginning of the linked list
