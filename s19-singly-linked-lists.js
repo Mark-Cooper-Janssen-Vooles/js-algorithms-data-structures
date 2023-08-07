@@ -56,12 +56,23 @@ class SinglyLinkedList {
       currentNode = currentNode.next
     }
   }
+
+  shift() {
+    if (!this.head) return undefined
+    const oldHead = this.head 
+    this.head = this.head.next
+    this.length--
+
+    return oldHead
+  }
 }
 
 const list = new SinglyLinkedList()
 list.push('hello')
 list.push('world')
 list.push('!!!')
-console.log(list.pop())
+
+// list.pop()
+//console.log(list.shift())
 
 console.log(list)

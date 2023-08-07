@@ -1154,3 +1154,6 @@ Comparisons with Arrays
 
 ### Pop 
 - removes a node from the end of the linked list
+
+### Shift
+- removes a node from the beginning of the Linked list!
