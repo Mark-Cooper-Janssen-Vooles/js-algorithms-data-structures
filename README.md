@@ -1160,3 +1160,7 @@ Comparisons with Arrays
 
 ### Unshift 
 - adding a new node to the beginning of the linked list
+
+### Get 
+- retrieving a node by its positioni n the linked list 
+- i.e. give it 0 it should get the head, give it 2 and it gets the 3rd item 

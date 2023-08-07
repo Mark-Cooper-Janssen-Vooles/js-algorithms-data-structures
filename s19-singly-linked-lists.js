@@ -79,16 +79,32 @@ class SinglyLinkedList {
 
     return this
   }
+
+  get(index) {
+    if (index + 1 > this.length) return undefined
+    if (index === 0) return this.head
+
+    let node = this.head
+    for (let i = 0; i < index; i++) {
+      //console.log(i, node.next)
+      node = node.next
+    }
+
+    return node
+  }
 }
 
 const list = new SinglyLinkedList()
 list.push('hello')
 list.push('world')
 list.push('!!!')
+list.push('hmm')
 
 // list.pop()
 //console.log(list.shift())
 
-list.unshift('hi')
+//list.unshift('hi')
 
-console.log(list)
+console.log(list.get(4))
+
+//console.log(list)
