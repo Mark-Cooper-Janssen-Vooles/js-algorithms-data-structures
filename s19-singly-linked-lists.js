@@ -101,6 +101,7 @@ class SinglyLinkedList {
   }
 
   insert(index, value) { // refactor
+    //console.log(index, value)
     if (index < 0 || index > this.length) return false
     if (index === this.length) return !!this.push(value)
     if (index === 0) return !!this.unshift(value)
@@ -117,25 +118,52 @@ class SinglyLinkedList {
   }
 
   remove(index) {
+    //console.log('remove index', index)
     if (index < 0 || index > this.length) return false
     if (index === this.length - 1) return this.pop()
     if (index === 0) return this.shift()
     // get previous node (one before index) and current node at index
     const deletedNode = this.get(index)
-    console.log(deletedNode)
+    //console.log(deletedNode)
     const prevNode = this.get(index - 1)
     prevNode.next = deletedNode.next
     this.length--
 
     return deletedNode
   }
+
+  reverse() {
+    let leftPointer = 0
+    let rightPointer = this.length - 1
+
+    while (rightPointer > leftPointer) {
+      // swap leftNode to right 
+      const leftNode = this.remove(leftPointer)
+      this.insert(rightPointer, leftNode.val)
+
+      // swap rightNode to left (decrement by one, since leftNode is now the "rightest")
+      const rightNode = this.remove(rightPointer - 1) 
+      this.insert(leftPointer, rightNode.val)
+
+      // increment / decrement both pointers 
+      leftPointer++
+      rightPointer--
+    }
+
+    return this
+  }
+
+  print() {
+    console.log(JSON.stringify(this))
+  }
 }
 
 const list = new SinglyLinkedList()
 list.push('hello')
 list.push('world')
+list.push('batman')
 list.push('!!!')
-list.push('hmm')
+//list.push('hmm')
 
 // list.pop()
 //console.log(list.shift())
@@ -149,5 +177,9 @@ list.push('hmm')
 
 //console.log(list.insert(0, 'bye')) // length 5, second value is 'bye'
 
-console.log(list.remove(3))
-console.log(list)
+//console.log(list.remove(3))
+
+
+list.print()
+list.reverse() // '!!!, 'batman', 'world', 'hello'
+list.print()

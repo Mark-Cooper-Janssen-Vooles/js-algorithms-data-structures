@@ -1177,3 +1177,7 @@ Comparisons with Arrays
 ### Remove
 - Removing a node from the linked list at a specific position
   - removing from the middle is a little more complicated, we need to adjust the previous nodes next to the deleted node's next.
+
+### Reverse
+- Reverse the linked list in place
+  - 
