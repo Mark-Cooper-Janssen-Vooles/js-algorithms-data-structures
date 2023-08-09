@@ -1173,3 +1173,7 @@ Comparisons with Arrays
 
 ### Insert 
 - adding a node to the linked list and the position specified 
+
+### Remove
+- Removing a node from the linked list at a specific position
+  - removing from the middle is a little more complicated, we need to adjust the previous nodes next to the deleted node's next.
