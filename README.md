@@ -1210,6 +1210,12 @@ Comparisons with Arrays
 Hash Tables in the wild:
 - python has dictionaries 
 - js has objects and maps 
+  - objects you're only allowed to use strings as keys though
 - java, go and scala have maps 
 - ruby has hashes
 
+
+- to implement a hash table, we'll use an array 
+  - in order to look up values by key, we need a way to convert keys into valid array indices
+  - i.e if our key is 'hello' or 'pink', we need a way to map that to an index. these are called 'hash functions' 
+  - an example could be, 0th index holds a key of "pink" and a value of "#ff69b4"
