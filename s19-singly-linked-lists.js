@@ -100,20 +100,37 @@ class SinglyLinkedList {
     return true
   }
 
-  insert(index, value) {
+  // insert(index, value) {
+  //   if (index < 0 || index > this.length) return false
+
+  //   if (index === this.length) { // insert onto end
+  //     this.push(value)
+  //   } else if (index === 0) { // insert onto start
+  //     this.unshift(value)
+  //   } else { // get previous node (one before index) and current node at index
+  //     const newNode = new Node(value)
+  //     const currentNode = this.get(index)
+  //     const prevNode = this.get(index - 1)
+  //     prevNode.next = newNode
+  //     newNode.next = currentNode  
+  //   }
+
+  //   this.length++
+
+  //   return true
+  // }
+
+  insert(index, value) { // refactor
     if (index < 0 || index > this.length) return false
 
-    if (index === this.length) { // insert onto end
-      this.push(value)
-    } else if (index === 0) { // insert onto start
-      this.unshift(value)
-    } else { // get previous node (one before index) and current node at index
-      const newNode = new Node(value)
-      const currentNode = this.get(index)
-      const prevNode = this.get(index - 1)
-      prevNode.next = newNode
-      newNode.next = currentNode  
-    }
+    if (index === this.length) return !!this.push(value)
+    if (index === 0) return !!this.unshift(value)
+    // get previous node (one before index) and current node at index
+    const newNode = new Node(value)
+    const currentNode = this.get(index)
+    const prevNode = this.get(index - 1)
+    prevNode.next = newNode
+    newNode.next = currentNode  
 
     this.length++
 
@@ -138,5 +155,5 @@ list.push('hmm')
 // console.log(list.set(5, 'bye'))
 
 
-console.log(list.insert(1, 'bye')) // length 5, second value is 'bye'
-// console.log(list)
+console.log(list.insert(0, 'bye')) // length 5, second value is 'bye'
+console.log(list)
