@@ -1180,4 +1180,12 @@ Comparisons with Arrays
 
 ### Reverse
 - Reverse the linked list in place
-  - 
+
+
+### Big O Complexity of Singly Linked List 
+- Insertion - O(1)
+- Removal - it depends O(1) or O(n)
+- Searching - O(n)
+- Access - O(n)
+
+- singly linked lists excel at insertion and deletion compared to arrays. if you are worried about that and don't need random access (arrays better for that), use singly linked lists.

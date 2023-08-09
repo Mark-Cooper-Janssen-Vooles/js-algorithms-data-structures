@@ -5,12 +5,6 @@ class Node {
   }
 }
 
-// const first = new Node('hi')
-// first.next = new Node('there')
-// first.next.next = new Node('world')
-
-// console.log(first)
-
 class SinglyLinkedList {
   constructor() {
     this.head = null
@@ -100,8 +94,7 @@ class SinglyLinkedList {
     return true
   }
 
-  insert(index, value) { // refactor
-    //console.log(index, value)
+  insert(index, value) {
     if (index < 0 || index > this.length) return false
     if (index === this.length) return !!this.push(value)
     if (index === 0) return !!this.unshift(value)
@@ -118,13 +111,11 @@ class SinglyLinkedList {
   }
 
   remove(index) {
-    //console.log('remove index', index)
     if (index < 0 || index > this.length) return false
     if (index === this.length - 1) return this.pop()
     if (index === 0) return this.shift()
     // get previous node (one before index) and current node at index
     const deletedNode = this.get(index)
-    //console.log(deletedNode)
     const prevNode = this.get(index - 1)
     prevNode.next = deletedNode.next
     this.length--
@@ -159,10 +150,13 @@ class SinglyLinkedList {
 }
 
 const list = new SinglyLinkedList()
-list.push('hello')
-list.push('world')
-list.push('batman')
 list.push('!!!')
+list.push('party')
+list.push('go')
+list.push('lets')
+list.push('barbie')
+list.push('on')
+list.push('come')
 //list.push('hmm')
 
 // list.pop()
@@ -179,7 +173,6 @@ list.push('!!!')
 
 //console.log(list.remove(3))
 
-
 list.print()
-list.reverse() // '!!!, 'batman', 'world', 'hello'
-list.print()
+list.reverse() 
+list.print() // 'come', 'on', 'barbie', 'lets', 'go', 'party', '!!!'
