@@ -48,7 +48,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - Section 22: Binary search trees (do)
   <!-- - Section 23: tree traversal (do) -->
   <!-- - Section 24: Binary heaps (similar to trees) -->
-  - Section 25: Hash tables 
+  - [Section 25: Hash tables](#hash-tables)
   - Section 26: Graphs 
   <!-- - Section 27: Graph traversal  -->
   - Section 28: Dijkstra's algorithm
@@ -1192,3 +1192,24 @@ Comparisons with Arrays
 - singly linked lists excel at insertion and deletion compared to arrays. if you are worried about that and don't need random access (arrays better for that), use singly linked lists.
 - arrays contained a built-in index, linked lists do not 
 - the idea of a list data structure that consists of nodes is the foundation for other data structures like Stacks and Queues
+
+---
+
+## Hash Tables 
+
+### Intro
+
+- the hash table is also known as the hash map 
+- built-in to nearly every programming language out there, similar to an array 
+- we'll make our own, but you normally want to use the built-in one 
+
+- Hash tables are used to store key-value pairs 
+  - in arrays, the keys, index's, are strictly numeric and ordered. in hash tables, they are not. 
+- Hash tables are fast for finding, adding and removing values 
+
+Hash Tables in the wild:
+- python has dictionaries 
+- js has objects and maps 
+- java, go and scala have maps 
+- ruby has hashes
+
