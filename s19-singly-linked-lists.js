@@ -101,21 +101,23 @@ class SinglyLinkedList {
   }
 
   insert(index, value) {
-    const newNode = new Node(value)
-    // get previous node (one before index) and current node at that index
-    const currentNode = this.get(index)
-    if (index === 0) {
-      this.head = newNode 
-      newNode.next = currentNode
-    } else {
+    if (index < 0 || index > this.length) return false
+
+    if (index === this.length) { // insert onto end
+      this.push(value)
+    } else if (index === 0) { // insert onto start
+      this.unshift(value)
+    } else { // get previous node (one before index) and current node at index
+      const newNode = new Node(value)
+      const currentNode = this.get(index)
       const prevNode = this.get(index - 1)
       prevNode.next = newNode
-      newNode.next = currentNode 
+      newNode.next = currentNode  
     }
 
     this.length++
 
-    return this
+    return true
   }
 }
 
@@ -136,5 +138,5 @@ list.push('hmm')
 // console.log(list.set(5, 'bye'))
 
 
-console.log(list.insert(1, 'bye'))
+console.log(list.insert(1, 'bye')) // length 5, second value is 'bye'
 // console.log(list)
