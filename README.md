@@ -1170,3 +1170,6 @@ Comparisons with Arrays
   - accepts a value and an index
   - use your `get` function to find the specific node 
   - if the node is not found, return false
+
+### Insert 
+- adding a node to the linked list and the position specified 

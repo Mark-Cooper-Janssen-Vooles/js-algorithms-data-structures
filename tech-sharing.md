@@ -1,4 +1,4 @@
-# Tech Sharking: Algorithms and Data Structures
+# Tech Sharing: Algorithms and Data Structures
 
 ## Big O
 

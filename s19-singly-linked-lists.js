@@ -99,6 +99,24 @@ class SinglyLinkedList {
 
     return true
   }
+
+  insert(index, value) {
+    const newNode = new Node(value)
+    // get previous node (one before index) and current node at that index
+    const currentNode = this.get(index)
+    if (index === 0) {
+      this.head = newNode 
+      newNode.next = currentNode
+    } else {
+      const prevNode = this.get(index - 1)
+      prevNode.next = newNode
+      newNode.next = currentNode 
+    }
+
+    this.length++
+
+    return this
+  }
 }
 
 const list = new SinglyLinkedList()
@@ -114,6 +132,9 @@ list.push('hmm')
 
 //console.log(list.get(4))
 
-console.log(list)
-console.log(list.set(5, 'bye'))
-console.log(list)
+// console.log(list)
+// console.log(list.set(5, 'bye'))
+
+
+console.log(list.insert(1, 'bye'))
+// console.log(list)
