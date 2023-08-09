@@ -1188,4 +1188,7 @@ Comparisons with Arrays
 - Searching - O(n)
 - Access - O(n)
 
+### Recap
 - singly linked lists excel at insertion and deletion compared to arrays. if you are worried about that and don't need random access (arrays better for that), use singly linked lists.
+- arrays contained a built-in index, linked lists do not 
+- the idea of a list data structure that consists of nodes is the foundation for other data structures like Stacks and Queues
