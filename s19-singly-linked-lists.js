@@ -116,10 +116,10 @@ class SinglyLinkedList {
     return true
   }
 
-  delete(index) {
+  remove(index) {
     if (index < 0 || index > this.length) return false
-    if (index === this.length - 1) return !!this.pop()
-    if (index === 0) return !!this.shift()
+    if (index === this.length - 1) return this.pop()
+    if (index === 0) return this.shift()
     // get previous node (one before index) and current node at index
     const deletedNode = this.get(index)
     console.log(deletedNode)
@@ -127,7 +127,7 @@ class SinglyLinkedList {
     prevNode.next = deletedNode.next
     this.length--
 
-    return true
+    return deletedNode
   }
 }
 
@@ -149,5 +149,5 @@ list.push('hmm')
 
 //console.log(list.insert(0, 'bye')) // length 5, second value is 'bye'
 
-console.log(list.delete(3))
+console.log(list.remove(3))
 console.log(list)
