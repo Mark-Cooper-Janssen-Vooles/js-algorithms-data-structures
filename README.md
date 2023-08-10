@@ -1224,3 +1224,10 @@ Hash Tables in the wild:
 
 - in order to look up values by key, we need a way to convert keys into valid array indices
   - the function that does this is called a 'hash function'
+
+- a function that takes data of n size, and outputs data of a fixed size
+- what makes a good hash?
+  1. fast (i.e. constant time)
+  2. doesn't cluster outputs at specific indices, but distrubtes uniformly 
+  3. deterministic (same input yields same output)
+
