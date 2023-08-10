@@ -1219,3 +1219,8 @@ Hash Tables in the wild:
   - in order to look up values by key, we need a way to convert keys into valid array indices
   - i.e if our key is 'hello' or 'pink', we need a way to map that to an index. these are called 'hash functions' 
   - an example could be, 0th index holds a key of "pink" and a value of "#ff69b4"
+
+### Intro to hash functions 
+
+- in order to look up values by key, we need a way to convert keys into valid array indices
+  - the function that does this is called a 'hash function'
