@@ -1231,3 +1231,26 @@ Hash Tables in the wild:
   2. doesn't cluster outputs at specific indices, but distrubtes uniformly 
   3. deterministic (same input yields same output)
 
+### Dealing with Collisions 
+
+- if our hash function produces the same number (i.e. index) for different input, thats called a collision
+````js 
+console.log(hash('pink', 13)) // 5
+console.log(hash('cyan', 13)) // 5
+````
+- collisions are inevitable, and there are many stratergies for dealing with them. two main ones:
+  - Separate Chaining 
+  - Linear probing 
+
+
+Separate Chaining:
+- if there is a collision, at each index in our array we store values using a more sophisticated data structure (e.g. an array or a linked list)
+- this allows us to store multiple key-value pairs at the same index 
+- i.e. index 4 has two values, instead of `["someKey": "someValue"]`, we've got two, so nested array could be one option:
+`[["key1": "someValue"], ["key2": "someValue2"]]`
+
+
+Linear Probing:
+- when we find a collision, we search through the array to find the next empty slot 
+- unlike with separate chaining, this allows us to store a single key-value at each index
+- i.e. `["someKey": "someValue"]` gets stored at index 4. then we want to add `["key2": "someValue2"]` but that hashes to index 4 too... so we look for the next empty slot, i.e. 5, so we store it there. 
