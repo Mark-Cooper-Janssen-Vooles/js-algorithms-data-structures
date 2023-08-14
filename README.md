@@ -1254,3 +1254,16 @@ Linear Probing:
 - when we find a collision, we search through the array to find the next empty slot 
 - unlike with separate chaining, this allows us to store a single key-value at each index
 - i.e. `["someKey": "someValue"]` gets stored at index 4. then we want to add `["key2": "someValue2"]` but that hashes to index 4 too... so we look for the next empty slot, i.e. 5, so we store it there. 
+
+#### Hash Table Set and Get 
+
+Set 
+1. accepts a key and a value
+2. Hashes the key 
+3. Stores the key-value pair in the hash table array via separate chaining (meaning if there is something already there, then in a nested structure)
+
+Get
+1. accepts a key 
+2. Hashes the key 
+3. Retrieves the key-value pair in the hash table. i.e. go to the index. if more than one array, then loop through and see if the key matches in the nested list
+4. if the key isn't found, returns undefined
