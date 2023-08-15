@@ -77,20 +77,15 @@ class HashTable {
 
   get(key) {
     const index = this._hash(key)
-    if (this._keyMap[index] === undefined) return undefined
+    if (this.keyMap[index]) {
 
-    if (Array.isArray(this.keyMap[index])) {
-      // if is array
-      this._keyMap[index].forEach((value) => {
-        if (key === value) {
-          return value
-        }
-      })
-
-    } else {
-      // if single value 
-      return this._keyMap[index]
+      for (let i = 0; i < this.keyMap[index].length; i++) {
+        const existingKey = this.keyMap[index][i][0]
+        if (existingKey === key) return this.keyMap[index][i][1]
+      }
     }
+
+    return undefined
   }
 }
 
@@ -99,4 +94,8 @@ const ht = new HashTable(4)
 ht.set('hello', 'goodbye')
 ht.set('dogs', 'cats')
 ht.set('barbie', 'oppenheimer')
-console.log(ht.keyMap)
+//console.log(ht.keyMap) 
+// [ , , [['hello', 'goodbye']], [['dogs', 'cats'], ['barbie', 'oppenheimer']] ]
+//  0  1  2                      3
+
+console.log(ht.get('barbie'))
