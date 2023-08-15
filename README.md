@@ -1267,3 +1267,12 @@ Get
 2. Hashes the key 
 3. Retrieves the key-value pair in the hash table. i.e. go to the index. if more than one array, then loop through and see if the key matches in the nested list
 4. if the key isn't found, returns undefined
+
+
+#### Keys / Values 
+
+Keys
+- loops through the hash table array and returns an array of keys in the table 
+
+Values
+- looks through the hash table array and returns an array of values in the table 

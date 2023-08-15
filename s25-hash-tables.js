@@ -87,6 +87,42 @@ class HashTable {
 
     return undefined
   }
+
+  keys() {
+    const keysArr = [] // return array of keys
+    this.keyMap.forEach((entry) => {
+      if (entry.length == 1) {
+        keysArr.push(entry[0][0])
+      }
+      if (entry.length > 1) {
+        entry.forEach((nestedEntry) => {
+          if (!keysArr.includes(nestedEntry[0])) {
+            keysArr.push(nestedEntry[0])
+          }
+        })
+      }
+    })
+
+    return keysArr
+  }
+
+  values() { 
+    const valuesArr = [] // return array of values
+    this.keyMap.forEach((entry) => {
+      if (entry.length == 1) {
+        valuesArr.push(entry[0][1])
+      }
+      if (entry.length > 1) {
+        entry.forEach((nestedEntry) => {
+          if (!valuesArr.includes(nestedEntry[1])) {
+            valuesArr.push(nestedEntry[1])
+          }
+        })
+      }
+    })
+
+    return valuesArr
+  }
 }
 
 const ht = new HashTable(4)
@@ -94,8 +130,12 @@ const ht = new HashTable(4)
 ht.set('hello', 'goodbye')
 ht.set('dogs', 'cats')
 ht.set('barbie', 'oppenheimer')
+
+
 //console.log(ht.keyMap) 
 // [ , , [['hello', 'goodbye']], [['dogs', 'cats'], ['barbie', 'oppenheimer']] ]
 //  0  1  2                      3
 
-console.log(ht.get('barbie'))
+//console.log(ht.get('barbie'))
+
+console.log(ht.keys())
