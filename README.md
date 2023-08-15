@@ -44,7 +44,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
 (whats the best? where do they excel) => maybe don't do the rest? see how it goes after intro. 
   - [Section 19: singly linked lists](#singly-linked-lists)
   <!-- - Section 20: doubly linked lists (can skip this if we do singly linked) -->
-  - Section 21: stacks + queues (do)
+  - [Section 21: stacks + queues](#stacks-and-queues)
   - Section 22: Binary search trees (do)
   <!-- - Section 23: tree traversal (do) -->
   <!-- - Section 24: Binary heaps (similar to trees) -->
@@ -1287,3 +1287,8 @@ Values
 - if we had a bad hash function which put everything into the same index, we'd have O(n) time 
 
 - hash tables closer to Maps in javascript 
+
+---
+
+## Stacks and Queues 
+
