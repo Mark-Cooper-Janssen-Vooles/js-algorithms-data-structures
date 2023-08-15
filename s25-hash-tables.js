@@ -139,3 +139,7 @@ ht.set('barbie', 'oppenheimer')
 //console.log(ht.get('barbie'))
 
 console.log(ht.keys())
+
+// problem with current set implementation: allows you to re-use the same key and add new values, i.e. duplicate keys. could change this to be better, but fine for now.
+// most languages would over-write what we already have.
+
