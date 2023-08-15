@@ -1276,3 +1276,14 @@ Keys
 
 Values
 - looks through the hash table array and returns an array of values in the table 
+
+
+#### Big O of hash tables 
+(average cases)
+1. insert: O(1)
+2. deletion: O(1)
+3. accesss: O(1)
+- the above 3 come down to how good the hash function is. O(1) in most languages implementations.
+- if we had a bad hash function which put everything into the same index, we'd have O(n) time 
+
+- hash tables closer to Maps in javascript 
