@@ -34,10 +34,10 @@ const hash = (key, arrayLength) => {
   return hash
 }
 
-console.log(hash('pink', 13)) // 5
-console.log(hash('cyan', 13)) // 5
+// console.log(hash('pink', 13)) // 5
+// console.log(hash('cyan', 13)) // 5
 
-// ======================
+// =================================================================
 
 // a hashtable class 
 
@@ -55,6 +55,48 @@ class HashTable {
       total = (total * WEIRD_PRIME + value) % this.keyMap.length
     }
   
-    return hash
+    return total
+  }
+
+  set(key, value) {
+    const index = this._hash(key)
+    // structure looks like this first run: 
+    // [ , , , , ]
+    // then we add our item. 
+    // if undefined, set empty array first:
+    // [ , , [] , ]
+    // then simply push it onto array:
+    // [ , , [['key', 'value']] , ]
+    if (this.keyMap[index] === undefined) {
+      this.keyMap[index] = []
+    } 
+    this.keyMap[index].push([key, value])
+
+    return index
+  }
+
+  get(key) {
+    const index = this._hash(key)
+    if (this._keyMap[index] === undefined) return undefined
+
+    if (Array.isArray(this.keyMap[index])) {
+      // if is array
+      this._keyMap[index].forEach((value) => {
+        if (key === value) {
+          return value
+        }
+      })
+
+    } else {
+      // if single value 
+      return this._keyMap[index]
+    }
   }
 }
+
+const ht = new HashTable(4)
+//console.log(ht._hash('hi'))
+ht.set('hello', 'goodbye')
+ht.set('dogs', 'cats')
+ht.set('barbie', 'oppenheimer')
+console.log(ht.keyMap)
