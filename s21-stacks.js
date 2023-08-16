@@ -22,5 +22,52 @@ stack2.shift() // removes from beginning
 
 // ------------------------
 
-// actually better to use a linked list for a stack for efficiency 
+// actually better to use a linked list for a stack for efficiency:
+class Node {
+  constructor(value) {
+    this.value = value
+    this.next = null
+  }
+}
 
+class SinglyLinkedListStack {
+  constructor() {
+    this.first = null
+    this.last = null
+    this.size = 0
+  }
+
+  push(value) { // push to the start, else we need to traverse to the end increasing Big O
+    const node = new Node(value)
+    if (this.size === 0) {
+      this.first = node
+      this.last = node 
+      this.size = this.size + 1
+    } else {
+      const oldFirst = this.first
+      node.next = oldFirst
+      this.first = node
+      this.size = this.size + 1
+    }
+  }
+
+  pop() { // pop off the start
+    if (!this.first) return undefined 
+    const oldFirst = this.first
+    this.first = oldFirst.next 
+
+    return oldFirst
+  }
+
+}
+
+const slStack = new SinglyLinkedListStack()
+slStack.push("FIRST")
+slStack.push("SECOND")
+slStack.push("THIRD")
+
+console.log(slStack)
+
+console.log(slStack.pop()) // should return "THIRD"
+
+console.log(slStack)
