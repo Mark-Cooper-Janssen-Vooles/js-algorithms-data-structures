@@ -1292,3 +1292,15 @@ Values
 
 ## Stacks and Queues 
 
+### Stacks
+- A stack is a LIFO data structure (last in first out)
+  - i.e. think about a stack of plates for cleaning, the first plate on the bottom is the last thing to be removed, and the last plate added is the first to be removed and cleaned.
+  - i.e. recursion is an example of a stack 
+- stacks are used:
+  - to manage function invocations (recursion)
+  - undo / redo 
+  - routing (the history object) is treated like a stack
+
+
+### Queues
+- A queue is a FIFO data structure (first in first out)
