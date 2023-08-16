@@ -54,6 +54,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - Section 28: Dijkstra's algorithm
   - Section 29: Dynamic programming 
   - Section 30: The wild west 
+- Summary of Big O's of data structures and when to use them
 
 ---
 
@@ -1427,3 +1428,9 @@ class Queue {
 ````
 
 #### Big O of Queues
+- Insertion: O(1)
+- Removal: O(1)
+- Searching: O(n)
+- Access: O(n)
+
+- same as Stacks - only use for insertion and removal heavy instances. 
