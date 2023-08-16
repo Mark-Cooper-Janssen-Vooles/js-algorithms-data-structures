@@ -49,14 +49,20 @@ class SinglyLinkedListStack {
       this.first = node
       this.size = this.size + 1
     }
+
+    return this.size
   }
 
   pop() { // pop off the start
     if (!this.first) return undefined 
     const oldFirst = this.first
+    if (this.size === 1) {
+      this.last = null
+    }
     this.first = oldFirst.next 
+    this.size = this.size - 1
 
-    return oldFirst
+    return oldFirst.value
   }
 
 }
@@ -70,4 +76,6 @@ console.log(slStack)
 
 console.log(slStack.pop()) // should return "THIRD"
 
+slStack.pop()
+slStack.pop()
 console.log(slStack)
