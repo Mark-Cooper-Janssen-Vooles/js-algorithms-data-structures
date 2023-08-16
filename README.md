@@ -1301,6 +1301,14 @@ Values
   - undo / redo 
   - routing (the history object) is treated like a stack
 
+### Creating a stack with an Array
+- theres more than one way of implementing a stack
+- easiest way is to use an array
+- some languages come with their own built-in stack data type (Javascript does not!)
+- `Arra.push('value')` and `Array.pop()` is one way to use a stack, which is more efficient than `Array.unshift('value')` and `Array.shift()` as that requires re-indexing the start. 
+- More efficient again than using an array is using a linked list
+  - 
+
 
 ### Queues
 - A queue is a FIFO data structure (first in first out)
