@@ -64,7 +64,6 @@ class SinglyLinkedListStack {
 
     return oldFirst.value
   }
-
 }
 
 const slStack = new SinglyLinkedListStack()

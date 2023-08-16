@@ -1310,8 +1310,58 @@ Values
 
 
 ### Writing our own stack from scratch - Singly Linked List Implementation
+````js
+class Node {
+  constructor(value) {
+    this.value = value
+    this.next = null
+  }
+}
 
+class SinglyLinkedListStack {
+  constructor() {
+    this.first = null
+    this.last = null
+    this.size = 0
+  }
 
+  push(value) { // push to the start, else we need to traverse to the end increasing Big O
+    const node = new Node(value)
+    if (this.size === 0) {
+      this.first = node
+      this.last = node 
+      this.size = this.size + 1
+    } else {
+      const oldFirst = this.first
+      node.next = oldFirst
+      this.first = node
+      this.size = this.size + 1
+    }
+
+    return this.size
+  }
+
+  pop() { // pop off the start
+    if (!this.first) return undefined 
+    const oldFirst = this.first
+    if (this.size === 1) {
+      this.last = null
+    }
+    this.first = oldFirst.next 
+    this.size = this.size - 1
+
+    return oldFirst.value
+  }
+}
+````
+
+#### Big O of stacks 
+- Insertion: O(1)
+- Removal: O(1)
+- Searching: O(n)
+- Access: O(n)
+
+- you wouldn't use a stack if searching and access were important
 
 ### Queues
 - A queue is a FIFO data structure (first in first out)
