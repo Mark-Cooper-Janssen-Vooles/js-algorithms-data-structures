@@ -1364,4 +1364,19 @@ class SinglyLinkedListStack {
 - you wouldn't use a stack if searching and access were important
 
 ### Queues
-- A queue is a FIFO data structure (first in first out)
+- sister of stack! often grouped together
+- A queue is a FIFO data structure (first in first out), i.e. the first added data is the first thing out, i.e. queueing up in a line in real life.
+  - en-queue (add) and de-queue (remove)
+
+#### Building a Queue with an Array 
+````js
+const queue = []
+queue.push("FIRST")
+queue.push("THIRD") // adds to end of queue 
+queue.push("THIRD") // adds to end 
+queue.shift() // removes from beginning of queue => ["SECOND", "THIRD"]
+
+// problem: using array, removing from beginning of array requires re-indexing everything. 
+````
+
+#### Building Queue from scratch using Singly linked List
