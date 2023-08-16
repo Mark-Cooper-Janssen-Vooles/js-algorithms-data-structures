@@ -45,7 +45,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - [Section 19: singly linked lists](#singly-linked-lists)
   <!-- - Section 20: doubly linked lists (can skip this if we do singly linked) -->
   - [Section 21: stacks + queues](#stacks-and-queues)
-  - Section 22: Binary search trees (do)
+  - [Section 22: Binary search trees](#binary-search-trees)
   <!-- - Section 23: tree traversal (do) -->
   <!-- - Section 24: Binary heaps (similar to trees) -->
   - [Section 25: Hash tables](#hash-tables)
@@ -1434,3 +1434,8 @@ class Queue {
 - Access: O(n)
 
 - same as Stacks - only use for insertion and removal heavy instances. 
+
+---
+
+## Binary Search Trees 
+
