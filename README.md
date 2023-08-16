@@ -1380,3 +1380,50 @@ queue.shift() // removes from beginning of queue => ["SECOND", "THIRD"]
 ````
 
 #### Building Queue from scratch using Singly linked List
+````js
+class Node {
+  constructor(value) {
+    this.value = value 
+    this.next = null 
+  }
+}
+
+class Queue {
+  constructor() {
+    this.head = null
+    this.tail = null
+    this.length = 0
+  }
+
+  // add to the end 
+  enqueue(value) {
+    const node = new Node(value)
+    if (!this.head) {
+      this.head = node
+      this.tail = node 
+    } else {
+      const tempTail = this.tail
+      this.tail = node
+      tempTail.next = node
+    }
+    this.length++
+  }
+
+  // remove from the start
+  dequeue() {
+    if (!this.head) return undefined 
+    const oldHead = this.head
+    if (this.length === 1) {
+      this.head = null
+      this.tail = null
+    } else {
+      this.head = oldHead.next
+    }
+    this.length--
+
+    return oldHead.value
+  }
+}
+````
+
+#### Big O of Queues
