@@ -1458,3 +1458,12 @@ class Queue {
   - Siblings - a side group of nodes with the same parent 
   - Leaf - a node with no children
   - Edge - the connection between one node and another 
+
+### Uses for Trees 
+
+- HTML DOM is a tree structure
+- JSON
+- Computer file systems
+
+### Intro to Binary Trees
+
