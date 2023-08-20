@@ -1438,3 +1438,23 @@ class Queue {
 ---
 
 ## Binary Search Trees 
+
+- Trees are more complicated than linked lists 
+- Difference between trees, binary trees and binary search trees 
+- implement operations on binary search trees 
+
+
+- Trees are data structures that consists of nodes (like linked lists) in a parent/child relationship 
+  - to be a tree, the parent can only point to a child
+
+
+- lists are linear (one path)
+- trees are non-linear (many different paths you can take)
+
+- terminology:
+  - Root - the top node in a tree 
+  - Child - a node directly connected to another node when moving away from the root
+  - Parent - the converse notion of a child 
+  - Siblings - a side group of nodes with the same parent 
+  - Leaf - a node with no children
+  - Edge - the connection between one node and another 
