@@ -1467,3 +1467,10 @@ class Queue {
 
 ### Intro to Binary Trees
 
+- Binary Trees are a type of Tree, and binary search trees are a special type of binary trees. 
+
+- Binary trees special condition:
+  - each node can have only two children
+
+- BST's used to sort data that is compared, that is ordered / comparable 
+- If we take any node on the tree, any item less than this node is located to the left. Every item greater than located on the right 
