@@ -1474,3 +1474,7 @@ class Queue {
 
 - BST's used to sort data that is compared, that is ordered / comparable 
 - If we take any node on the tree, any item less than this node is located to the left. Every item greater than located on the right 
+
+### Searching a binary search tree 
+
+- we start at the node, and compare our search value with that node. if its less than, we go to the left child. if greater than, we go to the right child, and we keep traversing the children until we find our value.
