@@ -15,29 +15,49 @@ class BinarySearchTree {
     const newNode = new Node(val)
     if (this.root === null) {
       this.root = newNode
-      return newNode
+      return this
     } 
+    
+    // recursive solution
+    // const recursivelyCheck = (comparisonNode) => {
+    //   if (newNode.value > comparisonNode.value) {
+    //     // insert to the right, or recursively call 
+    //     if (comparisonNode.right === null) {
+    //       comparisonNode.right = newNode
+    //     } else {
+    //       recursivelyCheck(comparisonNode.right)
+    //     }
+    //   } else {
+    //     // insert to the left, or recursively call
+    //     if (comparisonNode.left === null) {
+    //       comparisonNode.left = newNode
+    //     } else {
+    //       recursivelyCheck(comparisonNode.left)
+    //     }
+    //   }
+    // }
+    // recursivelyCheck(this.root)
+    // return this
 
-    const recursivelyCheck = (comparisonNode) => {
-      if (newNode.value > comparisonNode.value) {
-        // insert to the right, or recursively call 
-        if (comparisonNode.right === null) {
-          comparisonNode.right = newNode
+    // iterative solution:
+    let current = this.root 
+    while(true) {
+      if (val < current.value) { // it goes on left 
+        if (current.left === null) { // there is no left
+          current.left = newNode
+          return this
         } else {
-          recursivelyCheck(comparisonNode.right)
+          current = current.left // there is already a left
         }
-      } else {
-        // insert to the left, or recursively call
-        if (comparisonNode.left === null) {
-          comparisonNode.left = newNode
+      } else if (val > current.value ) { // it goes right
+        if (current.right === null) { // there is no right
+          current.right = newNode
+          return this
         } else {
-          recursivelyCheck(comparisonNode.left)
+          current = current.right // there is already a right
         }
       }
     }
-
-    recursivelyCheck(this.root)
-    return newNode
   }
 }
 
