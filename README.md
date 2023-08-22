@@ -1478,3 +1478,4 @@ class Queue {
 ### Searching a binary search tree 
 
 - we start at the node, and compare our search value with that node. if its less than, we go to the left child. if greater than, we go to the right child, and we keep traversing the children until we find our value.
+
