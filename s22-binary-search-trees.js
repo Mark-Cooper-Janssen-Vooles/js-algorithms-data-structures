@@ -20,6 +20,7 @@ class BinarySearchTree {
     
     // recursive solution
     // const recursivelyCheck = (comparisonNode) => {
+    //   if (newNode.value === comparisonNode.value) return undefined
     //   if (newNode.value > comparisonNode.value) {
     //     // insert to the right, or recursively call 
     //     if (comparisonNode.right === null) {
@@ -42,6 +43,7 @@ class BinarySearchTree {
     // iterative solution:
     let current = this.root 
     while(true) {
+      if (val === current.value) return undefined
       if (val < current.value) { // it goes on left 
         if (current.left === null) { // there is no left
           current.left = newNode
@@ -58,6 +60,11 @@ class BinarySearchTree {
         }
       }
     }
+
+  }
+
+  find(val) {
+    
   }
 }
 
