@@ -1491,11 +1491,24 @@ class Queue {
 ## Tree Traversal
 
 - how to visit every node of a tree one time
+- i.e. we're trying to find if a value exists in a particular node, but we have a tree that isn't ordered (not a binary search tree)
+- Two main approaches
+  - breadth first 
+    - we check the top layer, then all the roots children, then all the roots children children
+  - depth first 
+    - go down, i.e. all the way down to the last child 
+    - theres "InOrder", "PostOrder", "PreOrder"... different ways to do this 
+- many ways on visiting every node in a tree, usually using recursion 
+- we will do this using our binary search tree class (to not have to make a new class)
+
+
+### Breath first search 
 
 ---
 
 ## Data Structure Comparisons 
 
+- https://www.tablesgenerator.com/markdown_tables
 
 | Big O     | Queues / Stacks | Hash Tables | Singly Linked Lists | Binary Search Trees | Arrays |
 |-----------|-----------------|-------------|---------------------|---------------------|--------|
