@@ -108,30 +108,16 @@ class BinarySearchTree {
   }
 
   depthFirstPreOrderTreeTraversal() {
-    if (!this.root) return visited
-
-    const queue = []
+    if (!this.root) return []
     const visited = []
 
     const recursivelyAdd = (node) => {
-      queue.push(node)
-      if (queue.length === 0) return
-
-      if (!visited.includes(node.value)) visited.push(node.value)
-
-      if (node.left) {
-        if (!visited.includes(node.left.value)) {
-          recursivelyAdd(node.left) // recursively add the left first
-        }
-      }
-
-      if (node.right) {
-        if (!visited.includes(node.right.value)) {
-          recursivelyAdd(node.right) // recursively add right next 
-        }
-      }
+      visited.push(node.value)
+      if (node.left)
+        recursivelyAdd(node.left) // recursively add the left first
+      if (node.right) 
+        recursivelyAdd(node.right) // recursively add right next 
     }
-
     recursivelyAdd(this.root)
 
     return visited
@@ -148,4 +134,4 @@ tree1.insert(8)
 tree1.insert(20)
 
 console.log(tree1.breadthFirstTreeTraversal()) // [ 10, 6, 15, 3, 8, 20 ]
-console.log(tree1.depthFirstTreeTraversal()) // [10, 6, 3, 8, 15, 20]
+console.log(tree1.depthFirstPreOrderTreeTraversal()) // [10, 6, 3, 8, 15, 20]
