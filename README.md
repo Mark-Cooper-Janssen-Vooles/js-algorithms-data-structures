@@ -49,8 +49,8 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - [Section 23: tree traversal](#tree-traversal)
   <!-- - Section 24: Binary heaps (similar to trees) -->
   - [Section 25: Hash tables](#hash-tables)
-  - Section 26: Graphs 
-  <!-- - Section 27: Graph traversal  -->
+  - [Section 26: Graphs](#graphs) 
+  - Section 27: Graph traversal 
   - Section 28: Dijkstra's algorithm
   - Section 29: Dynamic programming 
   - Section 30: The wild west 
@@ -1532,7 +1532,20 @@ class Queue {
 
 ---
 
-### Graphs
+## Graphs
+
+- the graph data structure
+  - a collection of nodes and connections between these nodes
+- trees are a type of graph
+  - however they have 'parent nodes' and a 'root node', graphs connections seem more random
+- multiple ways to implement a graph; we will use the 'adjacency list'
+- traverse through graph using BFS and DFS 
+
+### Uses for Graphs 
+
+
+
+
 
 ---
 
