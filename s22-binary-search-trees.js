@@ -72,9 +72,11 @@ class BinarySearchTree {
       } else {
         if (val > currentNode.value) {
           // go to right node
+          if (!currentNode.right) return undefined // val not found
           currentNode = currentNode.right 
         } else {
           // go to left node 
+          if (!currentNode.left) return undefined 
           currentNode = currentNode.left
         }
       }
@@ -93,3 +95,4 @@ console.log(JSON.stringify(tree1))
 
 console.log(tree1.find(7))
 console.log(tree1.find(10))
+console.log(tree1.find(11))
