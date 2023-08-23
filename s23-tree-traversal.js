@@ -107,7 +107,7 @@ class BinarySearchTree {
     return visited
   }
 
-  depthFirstTreeTraversal() {
+  depthFirstPreOrderTreeTraversal() {
     if (!this.root) return visited
 
     const queue = []
