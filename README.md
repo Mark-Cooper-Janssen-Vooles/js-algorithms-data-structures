@@ -1364,6 +1364,8 @@ class SinglyLinkedListStack {
 
 - you wouldn't use a stack if searching and access were important
 
+---
+
 ### Queues
 - sister of stack! often grouped together
 - A queue is a FIFO data structure (first in first out), i.e. the first added data is the first thing out, i.e. queueing up in a line in real life.
@@ -1479,3 +1481,26 @@ class Queue {
 
 - we start at the node, and compare our search value with that node. if its less than, we go to the left child. if greater than, we go to the right child, and we keep traversing the children until we find our value.
 
+### big O of binary search tree (BST)
+
+- Insertion - O(log n)
+- Searching - O(log n)
+- 
+
+---
+
+## Data Structure Comparisons 
+
+: Table caption
+
++-----------+--------+--------+--------------+--------------------+--------------------+
+| Big O     | Queues | Stacks | Hash Tables  | Singly Linked List | Binary Search Tree |
++===========+========+========+==============+====================+====================+
+| Insertion | O(1)   | O(1)   | O(1)         | O(1)               | O(log n)           |
++-----------+--------+--------+--------------+--------------------+--------------------+
+| Searching | O(n)   | O(n)   | O(1)         | O(n)               | O(log n)           |
++-----------+--------+--------+--------------+--------------------+--------------------+
+| Removal   | O(1)   | O(1)   | O(1)         | O(1) or O(n)       |                    |
++-----------+--------+--------+--------------+--------------------+--------------------+
+| Access    | O(n)   | O(n)   | O(1)         | O(n)               |                    |
++-----------+--------+--------+--------------+--------------------+--------------------+
