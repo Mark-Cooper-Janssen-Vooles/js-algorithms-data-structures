@@ -91,12 +91,11 @@ class BinarySearchTree {
 
     const queue = []
     const visited = []
-    let currentNode = this.root 
-    queue.push(currentNode)
+    queue.push(this.root)
 
     while(queue.length > 0) {
       const node = queue.shift()
-      visited.push(node)
+      visited.push(node.value)
       if (node.left) {
         queue.push(node.left)
       }
@@ -118,4 +117,4 @@ tree1.insert(3)
 tree1.insert(8)
 tree1.insert(20)
 
-console.log(tree1.treeTraversal())
+console.log(tree1.breadthFirstTreeTraversal())
