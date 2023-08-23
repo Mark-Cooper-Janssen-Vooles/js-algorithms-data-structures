@@ -1523,6 +1523,17 @@ class Queue {
   - explore its entire right side 
 
 
+### When to use BFS / DFS 
+
+- Which is better? it depends on the situation
+- time complexity is the same, but space complexity differs 
+  - it depends on the tree
+    - if tree is wider than it is deep, depth first uses less space (the time is the same, but the space is more)
+
+---
+
+### Graphs
+
 ---
 
 ## Data Structure Comparisons 
