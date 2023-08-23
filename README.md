@@ -46,7 +46,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   <!-- - Section 20: doubly linked lists (can skip this if we do singly linked) -->
   - [Section 21: stacks + queues](#stacks-and-queues)
   - [Section 22: Binary search trees](#binary-search-trees)
-  <!-- - Section 23: tree traversal (do) -->
+  - [Section 23: tree traversal](#tree-traversal)
   <!-- - Section 24: Binary heaps (similar to trees) -->
   - [Section 25: Hash tables](#hash-tables)
   - Section 26: Graphs 
@@ -54,7 +54,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - Section 28: Dijkstra's algorithm
   - Section 29: Dynamic programming 
   - Section 30: The wild west 
-- Summary of Big O's of data structures and when to use them
+- [Summary of Big O's of data structures and when to use them](#data-structure-comparisons)
 
 ---
 
@@ -1485,7 +1485,12 @@ class Queue {
 
 - Insertion - O(log n)
 - Searching - O(log n)
-- 
+
+---
+
+## Tree Traversal
+
+- how to visit every node of a tree one time
 
 ---
 
@@ -1504,3 +1509,4 @@ class Queue {
 +-----------+--------+--------+--------------+--------------------+--------------------+
 | Access    | O(n)   | O(n)   | O(1)         | O(n)               |                    |
 +-----------+--------+--------+--------------+--------------------+--------------------+
+
