@@ -1513,6 +1513,16 @@ class Queue {
     - if there is a left property on the node - add it to the queue. if a right - add it to the queue
   - return variable that stores the values
 
+
+### Depth First PreOrder Intro
+
+- going down to the first child
+- for any node, visit the node itself. 
+  - add it to the list
+  - explore its entire left side
+  - explore its entire right side 
+
+
 ---
 
 ## Data Structure Comparisons 
