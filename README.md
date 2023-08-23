@@ -1543,6 +1543,11 @@ class Queue {
 
 ### Uses for Graphs 
 
+- social networks
+- mapping
+- routing algorithms 
+- file system optimisations
+
 
 
 
