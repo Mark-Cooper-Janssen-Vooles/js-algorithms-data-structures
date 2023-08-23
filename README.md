@@ -1548,7 +1548,19 @@ class Queue {
 - routing algorithms 
 - file system optimisations
 
+### Types of Graphs 
 
+- terminology:
+  - vertex - a node 
+  - edge - connection between nodes 
+  - weighted/unweighted
+    - each edge has no value associated if its unweighted
+    - if the edge has a value, it is weighted - there is information about the connection itself 
+    - i.e. if we're trying to find the shortest path, we want the weight - which may be length of km's in a map scenario 
+  - directed/undirected
+    - in an undirected graph, there are no directions associated to an edge. i.e. two friends on facebook are connected and can both view each others profiles 
+    - in a directed graph, there are directions. i.e. an admin can see a users account info, but the user can't see the admins account info
+      - directions can be one way or two way
 
 
 
