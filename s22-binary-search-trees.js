@@ -64,10 +64,11 @@ class BinarySearchTree {
   }
 
   find(val) {
+    if (!this.root) return undefined 
     let currentNode = this.root
+
     while(true) {
       if (currentNode.value === val) {
-        console.log(currentNode.value)
         return currentNode
       } else {
         if (val > currentNode.value) {
