@@ -86,7 +86,7 @@ class BinarySearchTree {
     }
   }
 
-  treeTraversal() {
+  breadthFirstTreeTraversal() {
     if (!this.root) return visited
 
     const queue = []

@@ -1502,7 +1502,7 @@ class Queue {
 - we will do this using our binary search tree class (to not have to make a new class)
 
 
-### Breath first search 
+### Breadth first search 
 
 - working horizontally
 - BFS iteratively:
