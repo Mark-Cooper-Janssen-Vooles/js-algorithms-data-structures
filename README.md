@@ -1562,6 +1562,52 @@ class Queue {
     - in a directed graph, there are directions. i.e. an admin can see a users account info, but the user can't see the admins account info
       - directions can be one way or two way
 
+### Impelementing Graphs 
+
+- storing / implementing them using code!
+- Two standard approaches:
+  - Adjacency matrix
+  - Adjacency List
+
+
+#### Adjacency Matrix
+
+- i.e looks something like the table below, where the 1's a true (a connection) and 0s false (no connection):
+
+|   | A | B | C | D |
+|---|---|---|---|---|
+| A | 0 | 1 | 0 | 0 |
+| B | 1 | 0 | 1 | 0 |
+| C | 0 | 1 | 0 | 1 |
+| D | 0 | 0 | 1 | 0 |
+
+- note that it reflects on both sides, i.e. perfect symmetry. this is an undirected graphs
+  - directed graphs are not symmetrical
+
+#### Adjacency List
+
+- looking at the below list, you can see index 3 has a connection between index 2 and 4
+- if you wanted to know if there was a connection between 5 and 1, you could look at either 1 or 5 to ascertain this
+````js
+[
+  [1, 5], // 0
+  [0, 2], // 1
+  [1, 3],
+  [2, 4], // index 3
+  [3, 5],
+  [4, 0] // 5 
+]
+````
+
+- if our nodes aren't numeric or in order, what then? could use a hash table!
+````js
+{
+  A: ['B', 'D'],
+  B: ['A', 'C'],
+  C: ['B', 'D'],
+  D: ['C', 'A']
+}
+````
 
 
 ---
