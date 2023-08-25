@@ -1639,7 +1639,9 @@ Adjacency Matrix:
 
 we will use an adjacency list 
 
-### Adjacency List: Add vertex 
+### Adjacency List: Add vertex, AddEdge, RemoveEdge, RemoveVertex
+
+- check out s26-graphs.js
 
 ---
 
