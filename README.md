@@ -1609,6 +1609,37 @@ class Queue {
 }
 ````
 
+#### Adjacency List vs Adjacency Matrix: Big O
+
+- V is number of verticies
+- E is the number of Edges 
+- 
+|   Operation   | Adjacency List | Adjacency Matrix |
+| ------------- | -------------- | ---------------- |
+| Add Vertex    | O(1)           | O(V^2)           |
+| Add Edge      | O(1)           | O(1)             |
+| Remove Vertex | O(V + E)       | O(V^l)           |
+| Remove Edge   | O(E)           | O(1)             |
+| Query         | O(V + E)       | O(1)             |
+| Storage       | O(V + E)       | O(V^2)           |
+
+- i.e. storage of an adjacency matrix is O(v^2)
+  - this makes sense as adding a new vertex means adding a new row and column to the matrix 
+- the adjacency list only grows by the number of verticies and edges 
+
+Adjacency List:
+- takes up less space 
+- Faster to iterate over all edges 
+- Can be slower lookup specific edges 
+
+Adjacency Matrix:
+- takes up more space 
+- slower to iterate over all edges 
+- faster lookup at specific edge
+
+we will use an adjacency list 
+
+### Adjacency List: Add vertex 
 
 ---
 
