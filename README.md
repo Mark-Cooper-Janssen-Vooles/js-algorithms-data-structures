@@ -51,9 +51,8 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   - [Section 25: Hash tables](#hash-tables)
   - [Section 26: Graphs](#graphs) 
   - [Section 27: Graph traversal](#graph-traversal)
-  - Section 28: Dijkstra's algorithm
-  - Section 29: Dynamic programming 
-  - Section 30: The wild west 
+  - [Section 28: Dijkstra's algorithm](#dijkstras-algorithm)
+  - [Section 29: Dynamic programming](#dynamic-programming)
 - [Summary of Big O's of data structures and when to use them](#data-structure-comparisons)
 
 ---
@@ -1659,6 +1658,25 @@ we will use an adjacency list
 - again using breadth first and depth first traversal
 
 ### Depth first Graph Traversal
+- explore as far as possible down one branch before 'backtracking' 
+  - in a tree: deepen traversal before we widen it, i.e. go left, then look at all the children of that one, then visit the other siblings 
+  - in a graph: pick one node, find one neighbour (x) and follow the neighbours of x before you visit its siblings 
+    - we could have some rule, i.e. if all our nodes are the alphabet, we could visit the neighbours in order alphabetically 
+
+- breadth first would pick the node, and check all its neighbours (x, y z), then visit x's neighbours, and y'z neighbours and z's neighbours etc
+
+---
+
+## Dijkstra's algorithm
+
+- works on a weighted graph
+- uses a priority queue 
+
+---
+
+## Dynamic Programming 
+
+- an optimisation over plain recursion. If we see a recursive solution that has repeated calls for the same inputs, we can optimise it using dynamic programming.
 
 ---
 
@@ -1666,11 +1684,11 @@ we will use an adjacency list
 
 - https://www.tablesgenerator.com/markdown_tables
 
-| Big O     | Queues / Stacks | Hash Tables | Singly Linked Lists | Binary Search Trees | Arrays |
-|-----------|-----------------|-------------|---------------------|---------------------|--------|
-| Insertion | O(1)            | O(1)        | O(1)                | O(log n)            | O(n)*  |
-| Searching | O(n)            | O(1)        | O(n)                | O(log n)            | O(n)   |
-| Removal   | O(1)            | O(1)        | O(1) or O(n)        |                     | O(n)   |
-| Access    | O(n)            | O(1)        | O(n)                |                     | O(1)   |
+| Big O     | Queues / Stacks | Hash Tables | Singly Linked Lists | Binary Search Trees | Arrays | Graphs -Agency List |
+|-----------|-----------------|-------------|---------------------|---------------------|--------|---------------------|
+| Insertion | O(1)            | O(1)        | O(1)                | O(log n)            | O(n)*  | O(1)                |
+| Searching | O(n)            | O(1)        | O(n)                | O(log n)            | O(n)   |                     |
+| Removal   | O(1)            | O(1)        | O(1) or O(n)        |                     | O(n)   | O(V + E) or O(E)    |
+| Access    | O(n)            | O(1)        | O(n)                |                     | O(1)   |                     |
 
 *O(n) to insert anywhere, O(1) to insert to end of list 
