@@ -50,7 +50,7 @@ Have node installed and simply run each file, i.e.: `node <name-of-file>.js`
   <!-- - Section 24: Binary heaps (similar to trees) -->
   - [Section 25: Hash tables](#hash-tables)
   - [Section 26: Graphs](#graphs) 
-  - Section 27: Graph traversal 
+  - [Section 27: Graph traversal](#graph-traversal)
   - Section 28: Dijkstra's algorithm
   - Section 29: Dynamic programming 
   - Section 30: The wild west 
@@ -1642,6 +1642,11 @@ we will use an adjacency list
 ### Adjacency List: Add vertex, AddEdge, RemoveEdge, RemoveVertex
 
 - check out s26-graphs.js
+
+### Graph Traversal
+
+- Traversal meaning => Visiting / updating / checking: each vertex in a graph 
+- When we want to traverse a graph, we need to specify a starting point as there is no root 
 
 ---
 
