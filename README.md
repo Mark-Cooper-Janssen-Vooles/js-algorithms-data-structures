@@ -1648,6 +1648,18 @@ we will use an adjacency list
 - Traversal meaning => Visiting / updating / checking: each vertex in a graph 
 - When we want to traverse a graph, we need to specify a starting point as there is no root 
 
+- Graph traversal uses:
+  - web crawlers
+  - finding 'closest' matches / recommendations 
+  - shortest path problems
+    - GPS navigation
+    - solving mazes 
+    - AI
+
+- again using breadth first and depth first traversal
+
+### Depth first Graph Traversal
+
 ---
 
 ## Data Structure Comparisons 
