@@ -60,3 +60,7 @@ g.log()
 g.removeEdge('Tokyo', 'Perth')
 g.removeVertex('Berlin')
 g.log()
+
+
+// [1, 0, 0, 0, -1, 0, 100]
+//           0      1  2 

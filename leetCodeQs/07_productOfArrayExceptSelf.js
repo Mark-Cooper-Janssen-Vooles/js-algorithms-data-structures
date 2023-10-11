@@ -31,22 +31,36 @@
 
 
 // memory is better, but still only beats 10% of JS users. Its also a nested loop!
-var productExceptSelf = function(nums) {
-  const productArr = []
-  let currentIndex = 0;
+// var productExceptSelf = function(nums) {
+//   const productArr = []
+//   let currentIndex = 0;
 
-  while (currentIndex !== nums.length) {
-    let product = 1
-    for (let i = 0; i < nums.length; i++) {
-      if (currentIndex !== i) {
-        product = product * nums[i]
-      }
-    }
-    productArr.push(product)
-    currentIndex++
+//   while (currentIndex !== nums.length) {
+//     let product = 1
+//     for (let i = 0; i < nums.length; i++) {
+//       if (currentIndex !== i) {
+//         product = product * nums[i]
+//       }
+//     }
+//     productArr.push(product)
+//     currentIndex++
+//   }
+
+//   return productArr
+// };
+
+var productExceptSelf = function(nums) {
+  const result =  []
+
+  let temp = 1;
+  for (let i = 0; i < nums.length; i++) {
+      result[i] = temp;
+      temp *= nums[i];
+      console.log('Temp: ', temp);
+      console.log('Result: ', result);
   }
 
-  return productArr
+  return result
 };
 
 console.log(productExceptSelf([1,2,3,4])) // [24,12,8,6]
